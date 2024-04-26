@@ -46,8 +46,8 @@ export const menus = [
     items: [
       {
         id: 1,
-        name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        name: "Edukasi Bencana",
+        url: "/edukasi-bencana",
       },
       {
         id: 2,
