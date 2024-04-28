@@ -15,7 +15,7 @@ export const Header = ({ inMobileHidden = false }) => {
         "hidden lg:block": inMobileHidden,
       })}
     >
-      <div className="mx-auto max-w-7xl bg-primary px-4 py-4 sm:px-6 lg:px-28 lg:py-4 lg:shadow-sm">
+      <div className="mx-auto max-w-7xl bg-primary px-4 py-4 sm:px-6 lg:px-8 lg:py-4 lg:shadow-sm">
         <div className="relative flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center space-x-4 lg:space-x-0">
