@@ -2,8 +2,9 @@ import Image from "next/image";
 
 import EmergencyContactCard from "@/components/EmergencyContactCard";
 import { Header } from "@/components/Header";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { InputWithLabel } from "@/components/InputWithLabel";
+import { TextareaWithLabel } from "@/components/TextAreaWithLabel";
+import { Button } from "@/components/ui";
 
 const EmergencyContactPage = () => {
   return (
@@ -67,6 +68,50 @@ const EmergencyContactPage = () => {
             phoneNumber="(021) 6344766"
             link="https://dinsos.jakarta.go.id/"
           />
+        </div>
+
+        {/* form section */}
+        <div className="mx-auto mt-20 h-[1000px] max-w-7xl bg-secondary">
+          <h2 className="text-2xl font-bold lg:text-3xl">Kritik dan Saran</h2>
+          <p className="text-base font-semibold md:text-lg">
+            Ayo, kirim kritik dan saranmu !!. Tolong jangan kirim hal hal berbau
+            SARA dan Pornografi
+          </p>
+
+          <div className="mx-auto mt-10 flex max-w-min items-center md:mt-10 md:gap-10 lg:mt-16 lg:gap-16">
+            <div className="relative hidden flex-shrink-0 md:flex md:h-[250px] md:w-[350px] lg:h-[300px] lg:w-[400px] xl:h-[350px] xl:w-[450px]">
+              <Image
+                fill
+                sizes="100vw"
+                quality={100}
+                className="object-contain"
+                src="/section/contact-form-image.png"
+                alt="contact form image"
+              />
+            </div>
+            <form
+              action=""
+              className="flex w-screen flex-col gap-4 md:w-[300px] lg:w-[400px]"
+            >
+              <InputWithLabel
+                label="Nama"
+                id="nama"
+                placeholder="Nama"
+                className="w-full"
+              />
+              <InputWithLabel
+                label="Alamat Email"
+                id="email"
+                placeholder="Alamat Email"
+              />
+              <TextareaWithLabel
+                label="Pesan"
+                id="message"
+                placeholder="Masukkan pesan anda"
+              />
+              <Button type="button">Kirim</Button>
+            </form>
+          </div>
         </div>
       </section>
     </>
