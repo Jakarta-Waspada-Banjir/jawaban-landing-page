@@ -71,7 +71,7 @@ const EmergencyContactPage = () => {
         </div>
 
         {/* form section */}
-        <div className="mx-auto mt-20 h-[1000px] max-w-7xl bg-secondary">
+        <div className="mx-auto mt-20 max-w-7xl bg-secondary">
           <h2 className="text-2xl font-bold lg:text-3xl">Kritik dan Saran</h2>
           <p className="text-base font-semibold md:text-lg">
             Ayo, kirim kritik dan saranmu !!. Tolong jangan kirim hal hal berbau
