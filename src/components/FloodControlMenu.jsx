@@ -35,7 +35,7 @@ const FloodControlMenu = () => {
             }
             className="justify-start"
           >
-            <Link href={`/pengendalian-banjir/${authorities}/${menu.slug}`}>
+            <Link href={`/pengendalian-banjir/${isUndefined}/${menu.slug}`}>
               {menu.title}
             </Link>
           </Button>
