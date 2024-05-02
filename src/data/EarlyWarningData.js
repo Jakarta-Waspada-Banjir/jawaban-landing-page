@@ -1,5 +1,6 @@
 // ----------------------- Early Warning -----------------------
 export const earlyWarningStatus = {
+  ALL: 0,
   STANDBY1: 1,
   STANDBY2: 2,
   STANDBY3: 3,
