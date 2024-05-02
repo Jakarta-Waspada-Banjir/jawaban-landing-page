@@ -18,20 +18,20 @@ import { menus } from "@/data/menus";
 
 import { Bars3Icon } from "./icons";
 
-import logoSvg from "/public/logo/jawaban-primary.svg";
+import logoSvg from "/public/logo/jawaban.svg";
 
 export function MobileMenu() {
   const [isOpenSheet, setIsOpenSheet] = useState(false);
   return (
     <Sheet open={isOpenSheet} onOpenChange={setIsOpenSheet}>
       <SheetTrigger aria-label="Open menu">
-        <Bars3Icon className="h-6 w-6 text-white lg:hidden" />
+        <Bars3Icon className="h-6 w-6 text-black lg:hidden" />
       </SheetTrigger>
       <SheetContent side="left" className="overflow-y-auto">
         <SheetHeader>
           <div className="flex flex-shrink-0 items-center">
             <Link href="/" className="inline-flex items-center">
-              <div className="relative h-10 w-10">
+              <div className="relative h-12 w-12">
                 <Image
                   fill
                   src={logoSvg}
@@ -39,14 +39,6 @@ export function MobileMenu() {
                   alt="Jawaban Logo"
                   sizes="200vw"
                 />
-              </div>
-              <div className="flex flex-col items-start pl-3 lg:pt-1">
-                <span className="text-base font-bold uppercase text-primary">
-                  JAWABAN
-                </span>
-                <span className="text-sm text-primary">
-                  Jakarta Waspada Banjir
-                </span>
               </div>
             </Link>
           </div>

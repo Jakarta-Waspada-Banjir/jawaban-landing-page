@@ -13,7 +13,7 @@ export const menus = [
   },
   {
     id: 3,
-    name: "Info Banjir",
+    name: "Informasi",
     url: "",
     items: [
       {
@@ -22,9 +22,9 @@ export const menus = [
         url: "/lorem-ipsum",
       },
       {
-        id: 2,
-        name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        id: 1,
+        name: "Edukasi Bencana",
+        url: "/edukasi-bencana",
       },
       {
         id: 3,
@@ -41,13 +41,13 @@ export const menus = [
   },
   {
     id: 5,
-    name: "Informasi",
+    name: "Media",
     url: "",
     items: [
       {
         id: 1,
-        name: "Edukasi Bencana",
-        url: "/edukasi-bencana",
+        name: "lorem ipsum",
+        url: "/lorem-ipsum",
       },
       {
         id: 2,

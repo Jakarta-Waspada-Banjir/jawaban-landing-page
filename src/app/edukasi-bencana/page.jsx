@@ -101,7 +101,7 @@ export default function DisasterEducation() {
           Yuk! Tambah Pengetahuanmu
         </h1>
 
-        <Accordion type="multiple" collapsible className="w-full">
+        <Accordion type="multiple" collapsible="true" className="w-full">
           {items.map((item) => (
             <AccordionItem key={item.id} value={`item-${item.id}`}>
               <AccordionTrigger className="hover:no-underline">
