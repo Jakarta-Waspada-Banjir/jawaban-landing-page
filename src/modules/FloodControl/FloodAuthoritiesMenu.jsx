@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
-import { Button } from "./ui";
+import { Button } from "../../components/ui";
 
 const FloodAuthoritiesMenu = () => {
   const { authorities } = useParams();
   const pathName = usePathname();
 
   return (
-    <div className="flex gap-3">
+    <div className="mx-auto flex gap-3 md:mx-0">
       <Button
         asChild
         size="lg"
@@ -25,9 +25,7 @@ const FloodAuthoritiesMenu = () => {
             : "border-2 border-primary"
         }
       >
-        <Link href="/pengendalian-banjir/pemerintah/sistem-pengendalian-banjir">
-          Pemerintah
-        </Link>
+        <Link href="/pengendalian-banjir/pemerintah">Pemerintah</Link>
       </Button>
       <Button
         size="lg"
@@ -39,9 +37,7 @@ const FloodAuthoritiesMenu = () => {
         }
         asChild
       >
-        <Link href="/pengendalian-banjir/masyarakat/kerja-bakti">
-          Masyarakat
-        </Link>
+        <Link href="/pengendalian-banjir/masyarakat">Masyarakat</Link>
       </Button>
     </div>
   );

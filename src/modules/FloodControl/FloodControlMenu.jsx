@@ -5,7 +5,7 @@ import { useParams, usePathname } from "next/navigation";
 
 import datas from "@/data/flood-control-data.json";
 
-import { Button } from "./ui";
+import { Button } from "../../components/ui";
 
 const FloodControlMenu = () => {
   const { authorities, slug } = useParams();
