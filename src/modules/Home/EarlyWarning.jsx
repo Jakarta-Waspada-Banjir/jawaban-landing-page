@@ -1,15 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ChevronDownCircleIcon,
+  ChevronRightCircleIcon,
+  ChevronUpCircleIcon,
+} from "lucide-react";
 
 import { BoxArrowUpRightIcon, FloodIcon } from "@/components/icons";
-import { Badge, Button, Card } from "@/components/ui";
-import { earlyWarningStatus, initialEarlyWarningData } from "@/data/HomeData";
+import {
+  Badge,
+  Button,
+  Card,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui";
+import {
+  earlyWarningStatus,
+  initialEarlyWarningData,
+} from "@/data/EarlyWarningData";
 import { formatDate } from "@/utils";
 
 export const EarlyWarning = () => {
-  const filteredEarlyWarningData = initialEarlyWarningData.filter(
-    (earlyWarning) => earlyWarning.status_code !== earlyWarningStatus.NORMAL,
-  );
+  const filteredEarlyWarningData = initialEarlyWarningData
+    .filter(
+      (earlyWarning) => earlyWarning.status_code !== earlyWarningStatus.NORMAL,
+    )
+    .slice(0, 3);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
@@ -23,7 +41,7 @@ export const EarlyWarning = () => {
           asChild
         >
           <Link
-            href="#"
+            href="/peringatan-dini"
             className="inline-flex items-center font-semibold text-primary"
           >
             Lihat Semua
@@ -35,7 +53,11 @@ export const EarlyWarning = () => {
       {initialEarlyWarningData.length > 0 ? (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredEarlyWarningData.map((earlyWarning) => (
-            <Link href="#" className="group" key={earlyWarning.id}>
+            <Link
+              href="/peringatan-dini"
+              className="group"
+              key={earlyWarning.id}
+            >
               <Card className="p-4 duration-200 ease-in-out group-hover:border-primary group-hover:bg-primary/10">
                 <div className="mb-1.5 flex items-center justify-between">
                   <h5 className="text-sm font-medium text-gray-400">
@@ -68,18 +90,64 @@ export const EarlyWarning = () => {
                   )}
                 </div>
                 <h1 className="line-clamp-2 text-lg font-bold text-gray-800 duration-200 ease-in-out group-hover:text-primary">
-                  {earlyWarning.title ?? "-"}
+                  {earlyWarning.name ?? "-"}
                 </h1>
                 <h4 className="line-clamp-2 font-medium text-gray-600">
                   {earlyWarning.location ?? "-"}
                 </h4>
-                <div className="mt-3 flex items-center">
-                  <FloodIcon className="h-auto w-9 text-primary" />
-                  <p className="ml-3 text-lg font-semibold text-gray-700">
-                    {earlyWarning.flood_height
-                      ? earlyWarning.flood_height + " cm"
-                      : "-"}
-                  </p>
+                <div className="mt-3 flex items-center justify-between">
+                  <div className="flex items-center">
+                    <FloodIcon className="h-auto w-9 text-primary" />
+                    <p className="ml-3 text-lg font-semibold text-gray-700">
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <div className="flex items-center">
+                              {earlyWarning.water_level
+                                ? earlyWarning.water_level + " cm"
+                                : "-"}
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent className="font-normal">
+                            Tinggi Air Saat Ini
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </p>
+                  </div>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <div className="flex items-center">
+                          {earlyWarning.water_level >
+                            earlyWarning.previous_water_level && (
+                            <ChevronUpCircleIcon className="h-auto w-8 rounded-full bg-red-500 p-0.5 text-white" />
+                          )}
+
+                          {earlyWarning.water_level <
+                            earlyWarning.previous_water_level && (
+                            <ChevronDownCircleIcon className="h-auto w-8 rounded-full bg-green-500 p-0.5 text-white" />
+                          )}
+
+                          {earlyWarning.water_level ==
+                            earlyWarning.previous_water_level && (
+                            <ChevronRightCircleIcon className="h-auto w-8 rounded-full bg-primary p-0.5 text-white" />
+                          )}
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        {earlyWarning.water_level >
+                          earlyWarning.previous_water_level &&
+                          "Tinggi Air Meningkat"}
+                        {earlyWarning.water_level <
+                          earlyWarning.previous_water_level &&
+                          "Tinggi Air Menurun"}
+                        {earlyWarning.water_level ==
+                          earlyWarning.previous_water_level &&
+                          "Tinggi Air Tetap"}
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
               </Card>
             </Link>

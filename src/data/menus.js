@@ -8,7 +8,7 @@ export const menus = [
   {
     id: 2,
     name: "Data",
-    url: "/data",
+    url: "#",
     items: [],
   },
   {
@@ -19,24 +19,24 @@ export const menus = [
       {
         id: 1,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "#",
       },
       {
-        id: 1,
+        id: 2,
         name: "Edukasi Bencana",
         url: "/edukasi-bencana",
       },
       {
         id: 3,
-        name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        name: "Peringatan Dini",
+        url: "/peringatan-dini",
       },
     ],
   },
   {
     id: 4,
     name: "Peta",
-    url: "/peta",
+    url: "#",
     items: [],
   },
   {
@@ -47,24 +47,24 @@ export const menus = [
       {
         id: 1,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "#",
       },
       {
         id: 2,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "#",
       },
       {
         id: 3,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "#",
       },
     ],
   },
   {
     id: 6,
     name: "Kontak",
-    url: "/kontak",
+    url: "/kontak-darurat",
     items: [],
   },
 ];

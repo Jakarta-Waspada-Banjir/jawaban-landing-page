@@ -35,54 +35,6 @@ export const initialNewsCarousel = [
   },
 ];
 
-// ----------------------- Early Warning -----------------------
-export const earlyWarningStatus = {
-  STANDBY1: 1,
-  STANDBY2: 2,
-  STANDBY3: 3,
-  NORMAL: 4,
-};
-
-export const initialEarlyWarningData = [
-  {
-    id: 1,
-    date: "2024-03-31T06:22:25.557035+07:00",
-    status: "Siaga 1",
-    status_code: 1,
-    title: "Pompa Kali Duri (Kalijodo)",
-    location: "Ciliwung",
-    flood_height: 215,
-  },
-  {
-    id: 2,
-    date: "2024-03-31T06:22:25.557035+07:00",
-    status: "Siaga 2",
-    status_code: 2,
-    title: "PS. Cibogo",
-    location: "Ciliwung",
-    flood_height: 245,
-  },
-  {
-    id: 3,
-    date: "2024-03-31T06:22:25.557035+07:00",
-    status: "Siaga 3",
-    status_code: 3,
-    title: "PS. Depok",
-    location: "Ciliwung",
-    flood_height: 195,
-  },
-  {
-    id: 4,
-    date: "2024-03-31T06:22:25.557035+07:00",
-    status: "Normal",
-    status_code: 4,
-    title: "PS. Kp. Melayu",
-    location: "Ciliwung",
-    flood_height: 200,
-  },
-];
-// ----------------------- End Early Warning -----------------------
-
 // ----------------------- Water Level -----------------------
 export const waterLevelStatus = {
   STANDBY1: 1,

@@ -25,11 +25,7 @@ export function DestkopMenu() {
               <DropdownMenuContent>
                 {menu.items.map((item) => (
                   <div key={item.id}>
-                    <Link
-                      href={`${item.url}`}
-                      className="hover:text-primary"
-                      onClick={() => setIsOpenSheet(false)}
-                    >
+                    <Link href={`${item.url}`} className="hover:text-primary">
                       <DropdownMenuItem>{item.name}</DropdownMenuItem>
                     </Link>
                   </div>

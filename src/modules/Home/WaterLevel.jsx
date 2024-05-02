@@ -24,7 +24,7 @@ export const WaterLevel = () => {
       <h1 className="mb-6 text-2xl font-semibold text-gray-700 md:text-3xl">
         Data Tinggi Muka Air
       </h1>
-      <div className="border-x border-t border-ternary-100 bg-white shadow lg:rounded-xl">
+      <div className="rounded-md border-x border-t border-ternary-100 bg-white shadow lg:rounded-xl">
         {/* Search */}
         <div className="px-4 pb-7 pt-5">
           <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between">
@@ -47,7 +47,7 @@ export const WaterLevel = () => {
         {/* Table */}
         <div className="px-4 pb-4">
           <div className="overflow-y-hidden rounded-lg border border-ternary-100 shadow-sm">
-            <div className="h-[605px] max-h-[640px] overflow-y-auto sm:h-min">
+            <div className="h-min max-h-[640px] overflow-y-auto">
               <table className="w-full table-auto divide-y divide-ternary-100 text-left align-top text-sm text-slate-700 sm:text-base">
                 <thead className="sticky top-0 bg-primary text-white">
                   <tr>
@@ -77,7 +77,7 @@ export const WaterLevel = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-ternary-100">
+                <tbody className="divide-y divide-ternary-100 font-medium text-gray-600">
                   {filteredWaterLevelData.length > 0 ? (
                     filteredWaterLevelData.map((waterLevelData) => (
                       <tr key={waterLevelData.id}>
