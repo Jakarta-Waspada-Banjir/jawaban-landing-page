@@ -1,5 +1,6 @@
 export * from "./accordion";
 export * from "./badge";
+export * from "./breadcrumb";
 export * from "./button";
 export * from "./card";
 export * from "./carousel";
@@ -8,4 +9,6 @@ export * from "./input";
 export * from "./label";
 export * from "./sheet";
 export * from "./sheet";
+export * from "./tabs";
 export * from "./textarea";
+export * from "./tooltip";

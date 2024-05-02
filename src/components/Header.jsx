@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -12,31 +11,11 @@ import { MobileMenu } from "./MobileMenu";
 import logoSvg from "/public/logo/jawaban.svg";
 
 export const Header = ({ inMobileHidden = false }) => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const stickyThreshold = 30;
-      if (window.scrollY > stickyThreshold && !isSticky) {
-        setIsSticky(true);
-      } else if (window.scrollY <= stickyThreshold && isSticky) {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isSticky]);
-
   return (
     <header
       className={cn(
-        "z-50 w-full bg-white shadow-md transition-all duration-700 ease-in-out",
+        "fixed left-0 right-0 top-0 z-50 w-full bg-white shadow-md",
         {
-          "fixed left-0 right-0 top-0 shadow-sm": isSticky,
           "hidden lg:block": inMobileHidden,
         },
       )}

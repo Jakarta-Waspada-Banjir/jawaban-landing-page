@@ -9,11 +9,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <NewsCarousel />
-      <EarlyWarning />
-      <WaterLevel />
-      <QuickAccess />
-      <RelatedNews />
+      <div className="pt-24 lg:pt-32">
+        <NewsCarousel />
+        <EarlyWarning />
+        <WaterLevel />
+        <QuickAccess />
+        <RelatedNews />
+      </div>
     </>
   );
 }
