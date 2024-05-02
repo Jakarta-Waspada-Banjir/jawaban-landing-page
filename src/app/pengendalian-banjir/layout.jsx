@@ -40,7 +40,7 @@ export default function FloodControlLayout({ children }) {
                 <h4 className="text-xl font-semibold">{title}</h4>
                 <ul>
                   {list.map((data, index) => (
-                    <li className="list-inside list-decimal" key={index}>
+                    <li className="list-outside list-decimal" key={index}>
                       {data}
                     </li>
                   ))}
