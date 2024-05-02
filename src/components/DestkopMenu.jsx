@@ -14,13 +14,13 @@ import { menus } from "@/data/menus";
 export function DestkopMenu() {
   return (
     <div className="hidden lg:block">
-      <div className="flex items-center space-x-5 text-white">
+      <div className="flex items-center space-x-5 font-medium text-black">
         {menus.map((menu) =>
           menu.items.length > 0 ? (
             <DropdownMenu key={menu.id}>
               <DropdownMenuTrigger className="flex items-center focus:outline-none">
                 {menu.name}{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-white" />
+                <ChevronDownIcon className="ml-2 h-4 w-4 text-black" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {menu.items.map((item) => (
