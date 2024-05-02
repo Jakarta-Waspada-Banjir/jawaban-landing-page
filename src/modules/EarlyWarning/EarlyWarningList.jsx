@@ -27,11 +27,15 @@ export const EarlyWarningList = ({ status }) => {
   const handleSearch = (e) => setSearch(e.target.value);
 
   const filteredEarlyWarningData = initialEarlyWarningData.filter(
-    (earlyWarning) =>
-      ((status === 0 || earlyWarning.status_code === status) &&
-        earlyWarning.name.toLowerCase().includes(search.toLowerCase())) ||
-      earlyWarning.location.toLowerCase().includes(search.toLowerCase()) ||
-      earlyWarning.status.toLowerCase().includes(search.toLowerCase()),
+    (earlyWarning) => {
+      return (
+        (status === earlyWarningStatus.ALL ||
+          earlyWarning.status_code === status) &&
+        (earlyWarning.name.toLowerCase().includes(search.toLowerCase()) ||
+          earlyWarning.location.toLowerCase().includes(search.toLowerCase()) ||
+          earlyWarning.status.toLowerCase().includes(search.toLowerCase()))
+      );
+    },
   );
 
   return (
