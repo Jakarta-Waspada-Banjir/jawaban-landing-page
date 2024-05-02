@@ -3,6 +3,12 @@
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui";
 import datas from "@/data/flood-control-data.json";
 
 const FloodControlPage = () => {
@@ -14,7 +20,8 @@ const FloodControlPage = () => {
 
   return (
     <>
-      <div className="overflow-y-scroll">
+      {/* desktop */}
+      <div className="hidden overflow-y-scroll md:block">
         <h3 className="text-2xl font-semibold text-primary">
           {selectedData.title}
         </h3>
@@ -70,6 +77,18 @@ const FloodControlPage = () => {
           </div>
         </div>
       </div>
+
+      {/* mobile */}
+      <Accordion type="multiple" className="w-full md:hidden">
+        {filteredData.data.map((data) => (
+          <AccordionItem key={data.id} value={`item-${data.id}`}>
+            <AccordionTrigger className="hover:no-underline">
+              {data.title}
+            </AccordionTrigger>
+            <AccordionContent>{data.paragraph}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </>
   );
 };
