@@ -19,47 +19,9 @@ const FloodControlPage = () => {
   return (
     <>
       {/* desktop */}
-      <div className="hidden overflow-y-scroll md:block">
-        <h3 className="text-2xl font-semibold text-primary">
-          {filteredData.data[0].title}
-        </h3>
-        <p className="mt-2 text-lg text-primary">
-          {filteredData.data[0].paragraph}
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <div className="relative md:h-36 md:w-36 lg:h-44 lg:w-44 xl:h-52 xl:w-52">
-            <Image
-              fill
-              alt="gatau"
-              className="object-cover"
-              src="/images/edukasi-banjir-1.jpeg"
-            />
-          </div>
-          <div className="relative md:h-36 md:w-36 lg:h-44 lg:w-44 xl:h-52 xl:w-52">
-            <Image
-              fill
-              alt="gatau"
-              className="object-cover"
-              src="/images/edukasi-banjir-1.jpeg"
-            />
-          </div>
-          <div className="relative md:h-36 md:w-36 lg:h-44 lg:w-44 xl:h-52 xl:w-52">
-            <Image
-              fill
-              alt="gatau"
-              className="object-cover"
-              src="/images/edukasi-banjir-1.jpeg"
-            />
-          </div>
-          <div className="relative md:h-36 md:w-36 lg:h-44 lg:w-44 xl:h-52 xl:w-52">
-            <Image
-              fill
-              alt="gatau"
-              className="object-cover"
-              src="/images/edukasi-banjir-1.jpeg"
-            />
-          </div>
-        </div>
+      <div className="hidden md:block">
+        <h3 className="text-xl font-semibold ">{filteredData.data[0].title}</h3>
+        <p className="mt-2">{filteredData.data[0].paragraph}</p>
       </div>
 
       {/* mobile */}

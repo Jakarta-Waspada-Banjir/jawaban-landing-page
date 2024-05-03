@@ -1,14 +1,14 @@
-import FloodControlMenu from "@/modules/FloodControl/FloodControlMenu";
 import { Separator } from "@/components/ui/separator";
+import FloodControlMenu from "@/modules/FloodControl/FloodControlMenu";
 
 const FloodControlLayout = ({ children }) => {
   return (
     <>
-      <div className="my-8 hidden h-[600px] w-full gap-5 rounded-xl bg-primary/10 p-5 md:flex">
+      <div className="my-8 hidden w-full gap-5 rounded-xl border-2 p-5 md:flex">
         <FloodControlMenu />
         <Separator
           orientation="vertical"
-          className="w-[3px] rounded-full bg-primary/30"
+          className="h-auto w-[3px] rounded-full bg-primary"
         />
         {children}
       </div>

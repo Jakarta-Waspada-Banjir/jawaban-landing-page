@@ -21,61 +21,9 @@ const FloodControlPage = () => {
   return (
     <>
       {/* desktop */}
-      <div className="hidden overflow-y-scroll md:block">
-        <h3 className="text-2xl font-semibold text-primary">
-          {selectedData.title}
-        </h3>
-        <p className="mt-2 text-lg text-primary">{selectedData.paragraph}</p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <div className="relative h-52 w-52">
-            <Image
-              fill
-              alt="gatau"
-              className="object-cover"
-              src="/images/edukasi-banjir-1.jpeg"
-            />
-          </div>
-          <div className="relative h-52 w-52">
-            <Image
-              src="/images/edukasi-banjir-1.jpeg"
-              fill
-              alt="gatau"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-52 w-52">
-            <Image
-              src="/images/edukasi-banjir-1.jpeg"
-              fill
-              alt="gatau"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-52 w-52">
-            <Image
-              src="/images/edukasi-banjir-1.jpeg"
-              fill
-              alt="gatau"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-52 w-52">
-            <Image
-              src="/images/edukasi-banjir-1.jpeg"
-              fill
-              alt="gatau"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-52 w-52">
-            <Image
-              src="/images/edukasi-banjir-1.jpeg"
-              fill
-              alt="gatau"
-              className="object-cover"
-            />
-          </div>
-        </div>
+      <div className="hidden md:block">
+        <h3 className="text-xl font-semibold ">{selectedData.title}</h3>
+        <p className="mt-2">{selectedData.paragraph}</p>
       </div>
 
       {/* mobile */}

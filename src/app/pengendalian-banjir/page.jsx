@@ -16,69 +16,17 @@ const FloodControlPage = () => {
   return (
     <>
       {/* desktop */}
-      <div className="my-8 hidden h-[600px] w-full gap-5 rounded-xl bg-primary/10 p-5 md:flex">
+      <div className="my-8 hidden w-full gap-5 rounded-xl border-2 p-5 md:flex">
         <FloodControlMenu />
         <Separator
           orientation="vertical"
-          className="w-[3px] rounded-full bg-primary/30"
+          className="h-auto w-[3px] rounded-full bg-primary"
         />
-        <div className="overflow-y-scroll">
-          <h3 className="text-2xl font-semibold text-primary">
+        <div className="">
+          <h3 className="text-xl font-semibold">
             {filteredData.data[0].title}
           </h3>
-          <p className="mt-2 text-lg text-primary">
-            {filteredData.data[0].paragraph}
-          </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <div className="relative h-52 w-52">
-              <Image
-                fill
-                alt="gatau"
-                className="object-cover"
-                src="/images/edukasi-banjir-1.jpeg"
-              />
-            </div>
-            <div className="relative h-52 w-52">
-              <Image
-                src="/images/edukasi-banjir-1.jpeg"
-                fill
-                alt="gatau"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-52 w-52">
-              <Image
-                src="/images/edukasi-banjir-1.jpeg"
-                fill
-                alt="gatau"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-52 w-52">
-              <Image
-                src="/images/edukasi-banjir-1.jpeg"
-                fill
-                alt="gatau"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-52 w-52">
-              <Image
-                src="/images/edukasi-banjir-1.jpeg"
-                fill
-                alt="gatau"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-52 w-52">
-              <Image
-                src="/images/edukasi-banjir-1.jpeg"
-                fill
-                alt="gatau"
-                className="object-cover"
-              />
-            </div>
-          </div>
+          <p className="mt-2">{filteredData.data[0].paragraph}</p>
         </div>
       </div>
 
