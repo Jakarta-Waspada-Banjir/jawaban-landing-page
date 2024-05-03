@@ -16,7 +16,7 @@ const FloodControlMenu = () => {
   const filteredData = datas.find((data) => data.authorities === isUndefined);
 
   return (
-    <div className="flex w-60 flex-shrink-0 flex-col gap-3">
+    <div className="flex w-60 flex-shrink-0 flex-col gap-2">
       {filteredData.data.map((menu, index) => {
         const isCurrentPathName =
           pathName === "/pengendalian-banjir/masyarakat" ||
