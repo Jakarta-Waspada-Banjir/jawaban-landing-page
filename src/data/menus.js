@@ -8,7 +8,7 @@ export const menus = [
   {
     id: 2,
     name: "Data",
-    url: "#",
+    url: "/coming-soon",
     items: [],
   },
   {
@@ -19,7 +19,7 @@ export const menus = [
       {
         id: 1,
         name: "lorem ipsum",
-        url: "#",
+        url: "/coming-soon",
       },
       {
         id: 2,
@@ -36,7 +36,7 @@ export const menus = [
   {
     id: 4,
     name: "Peta",
-    url: "#",
+    url: "/coming-soon",
     items: [],
   },
   {
@@ -47,17 +47,17 @@ export const menus = [
       {
         id: 1,
         name: "lorem ipsum",
-        url: "#",
+        url: "/coming-soon",
       },
       {
         id: 2,
         name: "lorem ipsum",
-        url: "#",
+        url: "/coming-soon",
       },
       {
         id: 3,
         name: "lorem ipsum",
-        url: "#",
+        url: "/coming-soon",
       },
     ],
   },
