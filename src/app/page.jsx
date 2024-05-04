@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { EarlyWarning } from "@/modules/Home/EarlyWarning";
 import { NewsCarousel } from "@/modules/Home/NewsCarousel";
@@ -16,6 +17,7 @@ export default function Home() {
         <QuickAccess />
         <RelatedNews />
       </div>
+      <Footer />
     </>
   );
 }
