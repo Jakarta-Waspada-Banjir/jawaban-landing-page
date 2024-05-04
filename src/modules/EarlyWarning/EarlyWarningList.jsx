@@ -63,7 +63,7 @@ export const EarlyWarningList = ({ status }) => {
         {/* Table */}
         <div className="px-4 pb-4">
           <div className="overflow-y-hidden rounded-lg border border-ternary-100 shadow-sm">
-            <div className="h-min max-h-[640px] overflow-y-auto">
+            <div className="no-scrollbar h-min max-h-[640px] overflow-y-auto">
               <table className="w-full table-auto divide-y divide-ternary-100 text-left align-top text-sm text-slate-700 sm:text-base">
                 <thead className="sticky top-0 bg-primary text-white">
                   <tr>

@@ -58,6 +58,10 @@ const items = [
   },
 ];
 
+export const metadata = {
+  title: "Edukasi Bencana",
+};
+
 export default function DisasterEducation() {
   return (
     <>
