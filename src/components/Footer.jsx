@@ -71,7 +71,7 @@ export const Footer = () => {
                   {navigation.quick_links.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href={item.href}
+                        href={item.url}
                         className="text-sm leading-6 text-white hover:text-white"
                       >
                         {item.name}
@@ -88,7 +88,7 @@ export const Footer = () => {
                   {navigation.resources.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href={item.href}
+                        href={item.url}
                         className="text-sm leading-6 text-white hover:text-white"
                       >
                         {item.name}
@@ -105,7 +105,7 @@ export const Footer = () => {
                   {navigation.practical_tips.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href={item.href}
+                        href={item.url}
                         className="text-sm leading-6 text-white hover:text-white"
                       >
                         {item.name}
@@ -122,7 +122,7 @@ export const Footer = () => {
                   {navigation.legal_and_support.map((item) => (
                     <li key={item.name}>
                       <Link
-                        href={item.href}
+                        href={item.url}
                         className="text-sm leading-6 text-white hover:text-white"
                       >
                         {item.name}
@@ -141,7 +141,7 @@ export const Footer = () => {
           </p>
           <div className="flex items-center space-x-4 pt-5 md:pt-0">
             {navigation.social_media.map((item) => (
-              <Link key={item.id} href={item.href}>
+              <Link key={item.id} href={item.url}>
                 {item.icon}
               </Link>
             ))}
