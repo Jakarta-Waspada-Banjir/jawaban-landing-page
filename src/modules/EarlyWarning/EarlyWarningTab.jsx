@@ -27,12 +27,12 @@ export const EarlyWarningTab = () => {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink href="/">Beranda</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbPage className="font-medium text-primary">
-              Breadcrumb
+              Peringatan Dini
             </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
