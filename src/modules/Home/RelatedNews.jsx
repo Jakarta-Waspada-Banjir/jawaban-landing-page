@@ -20,7 +20,7 @@ export const RelatedNews = () => {
           asChild
         >
           <Link
-            href="#"
+            href="/coming-soon"
             className="inline-flex items-center font-semibold text-primary"
           >
             Lihat Semua

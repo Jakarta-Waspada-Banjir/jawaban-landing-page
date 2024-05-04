@@ -30,7 +30,7 @@ export const QuickAccess = () => {
               <div className="group">
                 <Card className="h-[210px] max-w-xs bg-white p-6 duration-200 ease-in-out group-hover:border-primary sm:max-w-sm">
                   {data.icon}
-                  <Link href="#">
+                  <Link href="/coming-soon">
                     <h5 className="mb-2 line-clamp-1 text-xl font-bold group-hover:text-primary md:text-2xl">
                       {data.title ?? "-"}
                     </h5>
