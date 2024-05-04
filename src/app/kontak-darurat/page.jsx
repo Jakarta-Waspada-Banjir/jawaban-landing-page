@@ -6,6 +6,10 @@ import { InputWithLabel } from "@/components/InputWithLabel";
 import { TextareaWithLabel } from "@/components/TextAreaWithLabel";
 import { Button } from "@/components/ui";
 
+export const metadata = {
+  title: "Kontak Darurat",
+};
+
 const EmergencyContactPage = () => {
   return (
     <>

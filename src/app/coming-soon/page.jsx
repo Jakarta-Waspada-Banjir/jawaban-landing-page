@@ -4,6 +4,10 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui";
 
+export const metadata = {
+  title: "Segera Hadir",
+};
+
 const ComingSoon = () => {
   return (
     <>
