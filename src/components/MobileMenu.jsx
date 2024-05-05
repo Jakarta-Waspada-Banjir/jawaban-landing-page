@@ -64,7 +64,7 @@ export function MobileMenu() {
                     {menu.items.map((item) => (
                       <div key={item.id}>
                         <Link
-                          href={`/${item.name}`}
+                          href={`${item.url}`}
                           className="block py-2 hover:text-primary"
                           onClick={() => setIsOpenSheet(false)}
                         >

@@ -18,8 +18,8 @@ export const menus = [
     items: [
       {
         id: 1,
-        name: "lorem ipsum",
-        url: "/coming-soon",
+        name: "Info banjir",
+        url: "/info-banjir",
       },
       {
         id: 2,
