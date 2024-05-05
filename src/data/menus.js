@@ -64,7 +64,18 @@ export const menus = [
   {
     id: 6,
     name: "Kontak",
-    url: "/kontak-darurat",
-    items: [],
+    url: "",
+    items: [
+      {
+        id: 1,
+        name: "Kontak Kami",
+        url: "/coming-soon",
+      },
+      {
+        id: 2,
+        name: "Kontak Darurat",
+        url: "/kontak-darurat",
+      },
+    ],
   },
 ];

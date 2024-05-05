@@ -1,10 +1,25 @@
-import Image from "next/image";
-
-import EmergencyContactCard from "@/components/EmergencyContactCard";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InputWithLabel } from "@/components/InputWithLabel";
 import { TextareaWithLabel } from "@/components/TextAreaWithLabel";
-import { Button } from "@/components/ui";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  Card,
+} from "@/components/ui";
+import {
+  faqEmergencyContact,
+  initialEmergencyContact,
+} from "@/data/EmergencyContactData";
+import { EmergencyContactCard } from "@/modules/EmergencyContact/EmergencyContactCard";
 
 export const metadata = {
   title: "Kontak Darurat",
@@ -15,110 +30,110 @@ const EmergencyContactPage = () => {
     <>
       <Header />
       <div className="pt-24 lg:pt-32">
-        {/* hero section */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* header */}
-          <div className="my-8 flex flex-col items-center gap-x-16 md:flex-row xl:gap-x-20">
-            {/* content image desktop */}
-            <div className="relative hidden flex-shrink-0 md:block md:h-[250px] md:w-[200px] lg:h-[300px] lg:w-[250px] xl:h-[350px] xl:w-[300px]">
-              <Image
-                src="/section/emergency-contact-image.svg"
-                alt="Hero Image"
-                className="object-contain"
-                fill
-              />
-            </div>
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Beranda</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="font-medium text-primary">
+                  Kontak Darurat
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-            {/* content text */}
-            <div className="flex flex-col gap-y-5 text-primary">
-              <h1 className="text-center text-4xl font-bold md:text-left md:text-3xl lg:text-4xl xl:text-5xl">
-                Layanan 112
-              </h1>
-              {/* content image mobile */}
-              <div className="relative mx-auto h-[250px] w-[150px] md:hidden">
-                <Image
-                  src="/section/emergency-contact-image.svg"
-                  alt="Hero Image"
-                  className="object-contain"
-                  fill
-                />
+          <div className="my-8">
+            <h1 className="mb-2 text-2xl font-semibold text-gray-700 md:text-3xl">
+              Kontak Darurat
+            </h1>
+            <p className="text-sm font-medium text-gray-500 sm:text-base">
+              Halaman ini menyediakan informasi vital tentang cara menghubungi
+              layanan darurat. Gunakan nomor ini hanya dalam situasi darurat.
+              Untuk pertanyaan non-darurat, silahkan lihat informasi kontak
+              lainnya.
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <Card className="w-full p-6 shadow-md">
+              <div className="grid sm:grid-cols-2 md:grid-cols-4">
+                <div className="flex flex-col items-center border-b border-gray-200 pb-4 sm:border-r sm:p-4 md:border-b-0 md:pl-0">
+                  <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-5xl font-bold text-transparent">
+                    112
+                  </h2>
+                  <p className="mt-2 text-center text-base text-gray-500 md:text-sm">
+                    Panggilan Darurat Nasional
+                  </p>
+                </div>
+                <div className="flex flex-col items-center border-b border-gray-200 p-4 md:border-b-0 md:border-r">
+                  <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-5xl font-bold text-transparent">
+                    119
+                  </h2>
+                  <p className="mt-2 text-center text-base text-gray-500 md:text-sm">
+                    Pemadam Kebakaran
+                  </p>
+                </div>
+                <div className="flex flex-col items-center border-b border-gray-200 p-4 sm:border-b-0 sm:border-r">
+                  <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-5xl font-bold text-transparent">
+                    110
+                  </h2>
+                  <p className="mt-2 text-center text-base text-gray-500 md:text-sm">
+                    Polisi
+                  </p>
+                </div>
+                <div className="flex flex-col items-center pt-4 md:pl-4">
+                  <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-5xl font-bold text-transparent">
+                    118
+                  </h2>
+                  <p className="mt-2 text-center text-base text-gray-500 md:text-sm">
+                    Ambulan
+                  </p>
+                </div>
               </div>
-              <p className="text-justify md:text-base lg:text-lg">
-                Jangan ragu untuk menghubungi kami jika Anda memerlukan bantuan
-                darurat terkait dengan cuaca ekstrem, banjir, atau situasi
-                darurat lainnya. Kami dapat dihubungi melalui nomor darurat yang
-                tersedia atau melalui formulir kontak di situs web ini.
-              </p>
-            </div>
-          </div>
+            </Card>
 
-          {/* card */}
-          <div className="mt-20 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-20 xl:gap-24">
-            <EmergencyContactCard
-              company="BPBD DKI JAKARTA"
-              address="Jl. Kyai Haji Zainul Arifin No.71, RT.10/RW.10, Petojo Utara, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10130"
-              phoneNumber="(021) 6344766"
-              link="https://bpbd.jakarta.go.id/"
-            />
-            <EmergencyContactCard
-              company="Dinas Sosial DKI Jakarta"
-              address="Jl. Kyai Haji Zainul Arifin No.71, RT.10/RW.10, Petojo Utara, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10130"
-              phoneNumber="(021) 6344766"
-              link="https://dinsos.jakarta.go.id/"
-            />
-            <EmergencyContactCard
-              company="Dinas Sosial DKI Jakarta"
-              address="Jl. Kyai Haji Zainul Arifin No.71, RT.10/RW.10, Petojo Utara, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10130"
-              phoneNumber="(021) 6344766"
-              link="https://dinsos.jakarta.go.id/"
-            />
-          </div>
-
-          {/* form section */}
-          <div className="mx-auto mt-20 max-w-7xl bg-secondary">
-            <h2 className="text-2xl font-bold lg:text-3xl">Kritik dan Saran</h2>
-            <p className="text-base font-semibold md:text-lg">
-              Ayo, kirim kritik dan saranmu !!. Tolong jangan kirim hal hal
-              berbau SARA dan Pornografi
+            <p className="mt-10 text-sm font-medium text-gray-500 sm:text-base">
+              Informasi Kontak dan Kanal Komunikasi Resmi Pemerintah Provinsi
+              DKI Jakarta untuk Situasi Darurat Bencana
             </p>
 
-            <div className="mx-auto mt-10 flex max-w-min items-center md:mt-10 md:gap-10 lg:mt-16 lg:gap-16">
-              <div className="relative hidden flex-shrink-0 md:flex md:h-[250px] md:w-[350px] lg:h-[300px] lg:w-[400px] xl:h-[350px] xl:w-[450px]">
-                <Image
-                  fill
-                  sizes="100vw"
-                  quality={100}
-                  className="object-contain"
-                  src="/section/contact-form-image.png"
-                  alt="contact form image"
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {initialEmergencyContact.map((emergencyContact) => (
+                <EmergencyContactCard
+                  key={emergencyContact.id}
+                  image={emergencyContact.image}
+                  name={emergencyContact.name}
+                  address={emergencyContact.address}
+                  phone={emergencyContact.phone}
+                  email={emergencyContact.email}
+                  website={emergencyContact.website}
                 />
-              </div>
-              <form
-                action=""
-                className="flex w-screen flex-col gap-4 md:w-[300px] lg:w-[400px]"
-              >
-                <InputWithLabel
-                  label="Nama"
-                  id="nama"
-                  placeholder="Nama"
-                  className="w-full"
-                />
-                <InputWithLabel
-                  label="Alamat Email"
-                  id="email"
-                  placeholder="Alamat Email"
-                />
-                <TextareaWithLabel
-                  label="Pesan"
-                  id="message"
-                  placeholder="Masukkan pesan anda"
-                />
-                <Button type="button">Kirim</Button>
-              </form>
+              ))}
             </div>
           </div>
-        </section>
+
+          {/* FAQ */}
+          <h2 className="mb-8 mt-14 text-2xl font-semibold text-gray-700 sm:text-center md:text-3xl">
+            Pertanyaan Umum Mengenai Kontak Darurat
+          </h2>
+          <Accordion type="multiple" collapsible="true" className="w-full">
+            {faqEmergencyContact.map((item) => (
+              <AccordionItem key={item.id} value={`item-${item.id}`}>
+                <AccordionTrigger className="text-base font-semibold text-gray-700 hover:no-underline sm:text-lg">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm text-gray-500 sm:text-base">
+                  {item.answer} {item.link && item.link}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
+      <Footer />
     </>
   );
 };
