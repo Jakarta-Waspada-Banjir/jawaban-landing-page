@@ -4,6 +4,13 @@ export * from "./ChevronDownIcon";
 export * from "./DisasterMapIcon";
 export * from "./EmergencyCallIcon";
 export * from "./ExternalLinkIcon";
+export * from "./FloodInformationIcon";
+export * from "./MagnifyingGlassIcon";
+export * from "./OceanWavesIcon";
+export * from "./RainyCloudIcon";
+export * from "./ShieldIcon";
+export * from "./UpstreamRiverIcon";
+export * from "./WarningIcon";
 export * from "./FacebookIcon";
 export * from "./FloodIcon";
 export * from "./FloodInformationIcon";
@@ -16,3 +23,4 @@ export * from "./SearchIcon";
 export * from "./TiktokIcon";
 export * from "./WarningTriangleIcon";
 export * from "./XIcon";
+
