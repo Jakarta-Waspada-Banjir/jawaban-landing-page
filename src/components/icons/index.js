@@ -3,5 +3,8 @@ export * from "./ChevronDownIcon";
 export * from "./ExternalLinkIcon";
 export * from "./FloodInformationIcon";
 export * from "./MagnifyingGlassIcon";
+export * from "./OceanWavesIcon";
+export * from "./RainyCloudIcon";
 export * from "./ShieldIcon";
+export * from "./UpstreamRiverIcon";
 export * from "./WarningIcon";
