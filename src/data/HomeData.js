@@ -183,8 +183,8 @@ export const initialWaterLevelData = [
 export const initialQuickAccess = [
   {
     id: 1,
-    title: "Panggilan Darurat",
-    url: "/coming-soon",
+    title: "Kontak Darurat",
+    url: "/kontak-darurat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod semper felis, et luctus nisi.",
     icon: <EmergencyCallIcon className="mb-3 h-auto w-8" />,
