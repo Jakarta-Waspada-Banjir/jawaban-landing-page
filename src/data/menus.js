@@ -8,63 +8,74 @@ export const menus = [
   {
     id: 2,
     name: "Data",
-    url: "/data",
+    url: "/coming-soon",
     items: [],
   },
   {
     id: 3,
-    name: "Info Banjir",
+    name: "Informasi",
     url: "",
     items: [
       {
         id: 1,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "/coming-soon",
       },
       {
         id: 2,
-        name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        name: "Edukasi Bencana",
+        url: "/edukasi-bencana",
       },
       {
         id: 3,
-        name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        name: "Peringatan Dini",
+        url: "/peringatan-dini",
       },
     ],
   },
   {
     id: 4,
     name: "Peta",
-    url: "/peta",
+    url: "/coming-soon",
     items: [],
   },
   {
     id: 5,
-    name: "Informasi",
+    name: "Media",
     url: "",
     items: [
       {
         id: 1,
-        name: "Edukasi Bencana",
-        url: "/edukasi-bencana",
+        name: "lorem ipsum",
+        url: "/coming-soon",
       },
       {
         id: 2,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "/coming-soon",
       },
       {
         id: 3,
         name: "lorem ipsum",
-        url: "/lorem-ipsum",
+        url: "/coming-soon",
       },
     ],
   },
   {
     id: 6,
     name: "Kontak",
-    url: "/kontak",
-    items: [],
+    url: "",
+    items: [
+      {
+        id: 1,
+        name: "Kontak Kami",
+        url: "/coming-soon",
+      },
+      {
+        id: 2,
+        name: "Kontak Darurat",
+        url: "/kontak-darurat",
+      },
+    ],
   },
 ];

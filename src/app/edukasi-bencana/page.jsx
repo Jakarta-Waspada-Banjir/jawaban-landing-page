@@ -58,60 +58,65 @@ const items = [
   },
 ];
 
+export const metadata = {
+  title: "Edukasi Bencana",
+};
+
 export default function DisasterEducation() {
   return (
     <>
       <Header />
+      <div className="pt-24 lg:pt-32">
+        <Banner>
+          <h1 className="text-center text-xl font-semibold text-white sm:text-2xl">
+            Edukasi Bencana
+          </h1>
+          <p className="text-center text-lg text-white sm:text-xl">
+            Ayo! Temukan lebih banyak tentang bencana banjir
+          </p>
+        </Banner>
 
-      <Banner>
-        <h1 className="text-center text-xl font-semibold text-white sm:text-2xl">
-          Edukasi Bencana
-        </h1>
-        <p className="text-center text-lg text-white sm:text-xl">
-          Ayo! Temukan lebih banyak tentang bencana banjir
-        </p>
-      </Banner>
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="my-8 flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row">
+            {datas.map((data) => (
+              <Link
+                href={data.link}
+                key={data.id}
+                className="relative h-[234px] w-full cursor-pointer rounded-md border border-gray-300 shadow-lg lg:w-[416px]"
+              >
+                <Image
+                  src={data.image}
+                  alt="edukasi-banjir"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="h-full w-full rounded-md object-cover object-center"
+                />
+                <div className="absolute bottom-0 left-0 w-full rounded-md bg-black bg-opacity-40 p-3 text-white">
+                  <h3 className="line-clamp-2 text-base font-semibold">
+                    {data.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="my-8 flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row">
-          {datas.map((data) => (
-            <Link
-              href={data.link}
-              key={data.id}
-              className="relative h-[234px] w-full cursor-pointer rounded-md border border-gray-300 shadow-lg lg:w-[416px]"
-            >
-              <Image
-                src={data.image}
-                alt="edukasi-banjir"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="h-full w-full rounded-md object-cover object-center"
-              />
-              <div className="absolute bottom-0 left-0 w-full rounded-md bg-black bg-opacity-40 p-3 text-white">
-                <h3 className="line-clamp-2 text-base font-semibold">
-                  {data.title}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </div>
+          <h1 className="text-center text-xl font-semibold sm:text-2xl">
+            Yuk! Tambah Pengetahuanmu
+          </h1>
 
-        <h1 className="text-center text-xl font-semibold sm:text-2xl">
-          Yuk! Tambah Pengetahuanmu
-        </h1>
-
-        <Accordion type="multiple" collapsible className="w-full">
-          {items.map((item) => (
-            <AccordionItem key={item.id} value={`item-${item.id}`}>
-              <AccordionTrigger className="hover:no-underline">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
+          <Accordion type="multiple" collapsible="true" className="w-full">
+            {items.map((item) => (
+              <AccordionItem key={item.id} value={`item-${item.id}`}>
+                <AccordionTrigger className="hover:no-underline">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent>{item.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </section>
+      </div>
     </>
   );
 }
