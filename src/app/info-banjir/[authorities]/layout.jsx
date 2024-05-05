@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import FloodControlMenu from "@/modules/FloodControl/FloodControlMenu";
+import FloodControlMenu from "@/modules/FloodInformation/FloodControlMenu";
 
 const FloodControlLayout = ({ children }) => {
   return (

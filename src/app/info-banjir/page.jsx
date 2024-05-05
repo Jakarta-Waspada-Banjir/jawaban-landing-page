@@ -8,7 +8,7 @@ import {
 } from "@/components/ui";
 import { Separator } from "@/components/ui/separator";
 import datas from "@/data/flood-control-data.json";
-import FloodControlMenu from "@/modules/FloodControl/FloodControlMenu";
+import FloodControlMenu from "@/modules/FloodInformation/FloodControlMenu";
 
 const FloodControlPage = () => {
   const filteredData = datas.find((data) => data.authorities === "pemerintah");
