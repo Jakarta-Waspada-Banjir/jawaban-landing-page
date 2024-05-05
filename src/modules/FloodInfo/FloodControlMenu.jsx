@@ -19,9 +19,9 @@ const FloodControlMenu = () => {
     <div className="flex w-60 flex-shrink-0 flex-col gap-2">
       {filteredData.data.map((menu, index) => {
         const isCurrentPathName =
-          pathName === "/pengendalian-banjir/masyarakat" ||
-          pathName === "/pengendalian-banjir/pemerintah" ||
-          pathName === "/pengendalian-banjir";
+          pathName === "/info-banjir/masyarakat" ||
+          pathName === "/info-banjir/pemerintah" ||
+          pathName === "/info-banjir";
 
         return (
           <Button
@@ -35,7 +35,7 @@ const FloodControlMenu = () => {
             }
             className="justify-start"
           >
-            <Link href={`/pengendalian-banjir/${isUndefined}/${menu.slug}`}>
+            <Link href={`/info-banjir/${isUndefined}/${menu.slug}`}>
               {menu.title}
             </Link>
           </Button>

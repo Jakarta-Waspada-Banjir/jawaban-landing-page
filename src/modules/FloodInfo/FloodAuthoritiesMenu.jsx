@@ -15,7 +15,7 @@ const FloodAuthoritiesMenu = () => {
         asChild
         size="lg"
         variant={
-          authorities === "pemerintah" || pathName === "/pengendalian-banjir"
+          authorities === "pemerintah" || pathName === "/info-banjir"
             ? "default"
             : "outline"
         }
@@ -25,7 +25,7 @@ const FloodAuthoritiesMenu = () => {
             : "border-2 border-primary"
         }
       >
-        <Link href="/pengendalian-banjir/pemerintah">Pemerintah</Link>
+        <Link href="/info-banjir/pemerintah">Pemerintah</Link>
       </Button>
       <Button
         size="lg"
@@ -37,7 +37,7 @@ const FloodAuthoritiesMenu = () => {
         }
         asChild
       >
-        <Link href="/pengendalian-banjir/masyarakat">Masyarakat</Link>
+        <Link href="/info-banjir/masyarakat">Masyarakat</Link>
       </Button>
     </div>
   );
