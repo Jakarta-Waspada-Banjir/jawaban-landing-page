@@ -19,7 +19,7 @@ export const menus = [
       {
         id: 1,
         name: "Info banjir",
-        url: "/info-banjir",
+        url: "/info-banjir#header",
       },
       {
         id: 2,

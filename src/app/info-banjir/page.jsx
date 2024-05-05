@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import {
   Accordion,
   AccordionContent,
@@ -7,15 +5,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui";
 import { Separator } from "@/components/ui/separator";
-import datas from "@/data/flood-control-data.json";
+import { FloodControlData } from "@/data/FloodControlData";
 import FloodControlMenu from "@/modules/FloodInformation/FloodControlMenu";
 
 const FloodControlPage = () => {
-  const filteredData = datas.find((data) => data.authorities === "pemerintah");
+  const filteredData = FloodControlData.find(
+    (data) => data.authorities === "pemerintah",
+  );
 
   return (
     <>
-      {/* desktop */}
       <div className="my-8 hidden w-full gap-5 rounded-xl border-2 p-5 md:flex">
         <FloodControlMenu />
         <Separator
@@ -30,7 +29,6 @@ const FloodControlPage = () => {
         </div>
       </div>
 
-      {/* mobile */}
       <Accordion type="multiple" className="w-full md:hidden">
         {filteredData.data.map((data) => (
           <AccordionItem key={data.id} value={`item-${data.id}`}>

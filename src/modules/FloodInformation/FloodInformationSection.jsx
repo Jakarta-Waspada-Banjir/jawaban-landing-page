@@ -75,10 +75,10 @@ const FloodInformationSection = () => {
             <div className="flex items-center gap-6">
               {icon}
               <div className="flex h-full flex-col justify-between">
-                <p className="text-sm font-semibold text-gray-500 lg:text-xs xl:text-sm">
+                <p className="text-sm font-semibold text-gray-500  lg:text-xs xl:text-sm">
                   BANJIR
                 </p>
-                <h5 className="text-xl font-semibold md:text-2xl lg:text-xl xl:text-2xl">
+                <h5 className="text-xl font-semibold  md:text-2xl lg:text-xl xl:text-2xl">
                   {causes}
                 </h5>
               </div>

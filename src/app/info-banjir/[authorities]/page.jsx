@@ -8,12 +8,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui";
-import datas from "@/data/flood-control-data.json";
+import { FloodControlData } from "@/data/FloodControlData";
 
 const FloodControlPage = () => {
   const { authorities } = useParams();
 
-  const filteredData = datas.find((data) => data.authorities === authorities);
+  const filteredData = FloodControlData.find(
+    (data) => data.authorities === authorities,
+  );
 
   return (
     <>

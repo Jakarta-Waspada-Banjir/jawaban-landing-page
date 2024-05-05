@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
-import datas from "@/data/flood-control-data.json";
+import { FloodControlData } from "@/data/FloodControlData";
 
 import { Button } from "../../components/ui";
 
@@ -13,7 +13,9 @@ const FloodControlMenu = () => {
 
   const isUndefined = authorities === undefined ? "pemerintah" : authorities;
 
-  const filteredData = datas.find((data) => data.authorities === isUndefined);
+  const filteredData = FloodControlData.find(
+    (data) => data.authorities === isUndefined,
+  );
 
   return (
     <div className="flex w-60 flex-shrink-0 flex-col gap-2">
