@@ -7,7 +7,7 @@ const ThingsToDoSection = () => {
         <h2 className="mx-auto mt-8 text-xl font-semibold md:text-2xl">
           Hal Yang Harus Dilakukan
         </h2>
-        <p className="text-center md:text-lg">
+        <p className="text-center font-medium text-gray-500 md:text-lg">
           Beberapa hal penting yang dapat dilakukan untuk antisipasi musibah
           banjir
         </p>
@@ -16,13 +16,16 @@ const ThingsToDoSection = () => {
           {thingsToDo.map(({ id, icon, title, list }) => (
             <div
               key={id}
-              className="flex flex-col gap-3 rounded-xl border-2 p-8 md:p-10"
+              className="flex flex-col gap-3 rounded-xl border-2 p-5 md:p-7"
             >
               {icon}
-              <h4 className="text-xl font-semibold">{title}</h4>
+              <h4 className="text-lg font-semibold md:text-xl">{title}</h4>
               <ul>
                 {list.map((data, index) => (
-                  <li className="list-outside list-decimal" key={index}>
+                  <li
+                    className="ms-5 list-outside list-decimal text-sm text-gray-500 md:text-base"
+                    key={index}
+                  >
                     {data}
                   </li>
                 ))}

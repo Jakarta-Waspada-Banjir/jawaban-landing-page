@@ -1,6 +1,13 @@
-import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui";
 import FloodAuthoritiesMenu from "@/modules/FloodInformation/FloodAuthoritiesMenu";
 import FloodInformationSection from "@/modules/FloodInformation/FloodInformationSection";
 import ThingsToDoSection from "@/modules/FloodInformation/ThingsToDoSection";
@@ -9,16 +16,31 @@ export default function FloodControlLayout({ children }) {
   return (
     <>
       <Header />
-      <div className="pt-24 lg:pt-32">
-        <Banner>
-          <h1 className="text-center text-xl font-semibold text-white sm:text-2xl">
-            Info Banjir Jakarta
+      <div className="mx-auto max-w-7xl px-4 py-4 pt-24 sm:px-6 lg:px-8 lg:py-6 lg:pt-32">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Beranda</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage className="font-medium text-primary">
+                Info Banjir
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <div className="my-8">
+          <h1 className="text-xl font-semibold md:text-2xl">
+            Kenapa Jakarta Sering Mengalami Banjir?
           </h1>
-          <p className="text-center text-lg text-white sm:text-xl">
-            Temukan berbagai informasi mengenai banjir di Jakarta, mulai dari
-            penyebab hingga mitigasi banjir di Jakarta.
+          <p className="text-sm font-medium text-gray-500 sm:text-base">
+            Secara geografis, DKI Jakarta merupakan dataran rendah yang berada
+            di antara hulu sungai dan pesisir. Berikut adalah 3 penyebab utama
+            Jakarta sering mengalami banjir:
           </p>
-        </Banner>
+        </div>
 
         <FloodInformationSection />
 
@@ -28,7 +50,7 @@ export default function FloodControlLayout({ children }) {
               <h2 className="text-xl font-semibold md:text-2xl lg:mt-8">
                 Pengendalian Banjir
               </h2>
-              <p className="text-center md:text-lg">
+              <p className="text-center font-medium text-gray-500 md:text-lg">
                 Ketahui cara pengendalian banjir yang dapat dilakukan baik oleh
                 pemerintah atau masyarakat
               </p>

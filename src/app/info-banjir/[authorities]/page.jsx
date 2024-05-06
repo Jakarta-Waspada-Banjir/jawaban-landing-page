@@ -8,19 +8,21 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui";
-import datas from "@/data/flood-control-data.json";
+import { FloodControlData } from "@/data/FloodControlData";
 
 const FloodControlPage = () => {
   const { authorities } = useParams();
 
-  const filteredData = datas.find((data) => data.authorities === authorities);
+  const filteredData = FloodControlData.find(
+    (data) => data.authorities === authorities,
+  );
 
   return (
     <>
       {/* desktop */}
       <div className="hidden md:block">
         <h3 className="text-xl font-semibold ">{filteredData.data[0].title}</h3>
-        <p className="mt-2">{filteredData.data[0].paragraph}</p>
+        <p className="mt-2 text-gray-500">{filteredData.data[0].paragraph}</p>
       </div>
 
       {/* mobile */}
@@ -30,7 +32,9 @@ const FloodControlPage = () => {
             <AccordionTrigger className="hover:no-underline">
               {data.title}
             </AccordionTrigger>
-            <AccordionContent>{data.paragraph}</AccordionContent>
+            <AccordionContent className="text-gray-500">
+              {data.paragraph}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

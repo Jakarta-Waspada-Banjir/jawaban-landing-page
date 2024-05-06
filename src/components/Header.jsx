@@ -13,6 +13,7 @@ import logoSvg from "/public/logo/jawaban.svg";
 export const Header = ({ inMobileHidden = false }) => {
   return (
     <header
+      id="header"
       className={cn(
         "fixed left-0 right-0 top-0 z-50 w-full bg-white shadow-md",
         {
