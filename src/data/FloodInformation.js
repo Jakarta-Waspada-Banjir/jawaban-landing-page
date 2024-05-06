@@ -8,7 +8,7 @@ import {
 export const thingsToDo = [
   {
     id: 1,
-    icon: <MagnifyingGlassIcon className="h-16 w-16" />,
+    icon: <MagnifyingGlassIcon className="h-10 w-10 md:h-16 md:w-16" />,
     title: "Sebelum Terjadi Banjir",
     list: [
       "Ketahui wilayah-wilayah rawan banjir",
@@ -20,7 +20,7 @@ export const thingsToDo = [
   },
   {
     id: 2,
-    icon: <WarningIcon className="h-16 w-16" />,
+    icon: <WarningIcon className="h-10 w-10 md:h-16 md:w-16" />,
     title: "Ketika Ada Potensi Banjir",
     list: [
       "Perhatikan informasi peringatan dini berupa notifikasi dari aplikasi JAKI, media sosial, ataupun pengeras suara",
@@ -32,7 +32,7 @@ export const thingsToDo = [
   },
   {
     id: 3,
-    icon: <FloodInformationIcon className="h-16 w-16" />,
+    icon: <FloodInformationIcon className="h-10 w-10 md:h-16 md:w-16" />,
     title: "Saat Terjadi Banjir",
     list: [
       "Cari informasi dari sumber yang terpercaya",
@@ -44,7 +44,7 @@ export const thingsToDo = [
   },
   {
     id: 4,
-    icon: <ShieldIcon className="h-16 w-16" />,
+    icon: <ShieldIcon className="h-10 w-10 md:h-16 md:w-16" />,
     title: "Sesudah Terjadi Banjir",
     list: [
       "Cari informasi kondisi saat ini dan tempat mendapatkan bantuan dari sumber terpercaya",

@@ -19,13 +19,13 @@ const FloodControlPage = () => {
         <FloodControlMenu />
         <Separator
           orientation="vertical"
-          className="h-auto w-[3px] rounded-full bg-primary"
+          className="h-auto w-[3px] rounded-full bg-primary/50"
         />
         <div className="">
           <h3 className="text-xl font-semibold">
             {filteredData.data[0].title}
           </h3>
-          <p className="mt-2">{filteredData.data[0].paragraph}</p>
+          <p className="mt-2 text-gray-500">{filteredData.data[0].paragraph}</p>
         </div>
       </div>
 
@@ -35,7 +35,9 @@ const FloodControlPage = () => {
             <AccordionTrigger className="hover:no-underline">
               {data.title}
             </AccordionTrigger>
-            <AccordionContent>{data.paragraph}</AccordionContent>
+            <AccordionContent className="text-gray-500">
+              {data.paragraph}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

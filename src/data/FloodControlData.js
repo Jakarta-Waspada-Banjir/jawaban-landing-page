@@ -56,7 +56,7 @@ export const FloodControlData = [
         slug: "kerja-bakti",
         title: "Kerja Bakti",
         paragraph:
-          "Kerja bakti merupakan salah satu wujud dari kegiatan gotong- royong antar warga masyarakat untuk menjaga kebersihan lingkungan sekitar. Tujuan dari kegiatan kerja bakti adalah untuk menjaga agar lingkungan tetap bersih dan menjaga kelestarian lingkungan serta sumber daya alam yang ada.",
+          "Kerja bakti merupakan salah satu wujud dari kegiatan gotong-royong antar warga masyarakat untuk menjaga kebersihan lingkungan sekitar. Tujuan dari kegiatan kerja bakti adalah untuk menjaga agar lingkungan tetap bersih dan menjaga kelestarian lingkungan serta sumber daya alam yang ada.",
       },
       {
         id: 2,

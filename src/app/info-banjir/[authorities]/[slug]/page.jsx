@@ -23,7 +23,7 @@ const FloodControlPage = () => {
     <>
       <div className="hidden md:block">
         <h3 className="text-xl font-semibold ">{selectedData.title}</h3>
-        <p className="mt-2">{selectedData.paragraph}</p>
+        <p className="mt-2 text-gray-500">{selectedData.paragraph}</p>
       </div>
 
       <Accordion type="multiple" className="w-full md:hidden">
@@ -32,7 +32,9 @@ const FloodControlPage = () => {
             <AccordionTrigger className="hover:no-underline">
               {data.title}
             </AccordionTrigger>
-            <AccordionContent>{data.paragraph}</AccordionContent>
+            <AccordionContent className="text-gray-500">
+              {data.paragraph}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
