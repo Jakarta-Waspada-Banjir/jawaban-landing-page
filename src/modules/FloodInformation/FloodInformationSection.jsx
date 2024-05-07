@@ -7,7 +7,7 @@ import {
   RainyCloudIcon,
   UpstreamRiverIcon,
 } from "@/components/icons";
-import { MDPreview } from "@/components/MdPreview";
+import { MDPreview } from "@/components/MDPreview";
 import { cn } from "@/lib/utils";
 
 const causesOfFlooding = [
