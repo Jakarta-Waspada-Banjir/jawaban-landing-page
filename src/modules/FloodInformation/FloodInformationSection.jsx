@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 import {
@@ -28,7 +27,7 @@ const causesOfFlooding = [
     ),
     causes: "Kiriman",
     paragraph:
-      "<Hujan>Karena berada di wilayah dataran rendah dan memiliki 13 aliran sungai, Jakarta dapat banjir jika hujan terjadi di hulu sungai. Hujan dengan intesitas tinggi di daerah hulu (Jawa Barat dan Banten) akan terbawa melalui aliran sungai ke Jakarta sebelum lepas ke laut.<p/> <p>Hal inilah yang membuat sungai yang bermuara di Jakarta meluap dan mengakibatkan banjir. Pada saat kondisi tertentu kapasitas aliran sungai di Jakarta tersebut tidak cukup menampung air, sehingga terjadi limpasan di beberapa bantaran sungai di Jakarta.</p>",
+      "<p>Karena berada di wilayah dataran rendah dan memiliki 13 aliran sungai, Jakarta dapat banjir jika hujan terjadi di hulu sungai. Hujan dengan intesitas tinggi di daerah hulu (Jawa Barat dan Banten) akan terbawa melalui aliran sungai ke Jakarta sebelum lepas ke laut.<p/> <p>Hal inilah yang membuat sungai yang bermuara di Jakarta meluap dan mengakibatkan banjir. Pada saat kondisi tertentu kapasitas aliran sungai di Jakarta tersebut tidak cukup menampung air, sehingga terjadi limpasan di beberapa bantaran sungai di Jakarta.</p>",
   },
   {
     id: 3,
