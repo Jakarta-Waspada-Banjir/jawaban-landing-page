@@ -3,7 +3,7 @@
 export const MDPreview = ({ value = "" }) => {
   return (
     <div
-      className="w-full"
+      className="prose w-full"
       dangerouslySetInnerHTML={{
         __html: value,
       }}
