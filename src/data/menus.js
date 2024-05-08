@@ -36,7 +36,7 @@ export const menus = [
   {
     id: 4,
     name: "Peta",
-    url: "/coming-soon",
+    url: "/peta-informasi-banjir",
     items: [],
   },
   {
