@@ -3,7 +3,6 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-import "leaflet/dist/leaflet.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
