@@ -31,6 +31,8 @@ import { SluiceGatesMarker } from "./Marker/SluiceGatesMarker";
 import { Highlight } from "./Highlight";
 import { ToggleableMarker } from "./ToggleableMarker";
 
+import "leaflet/dist/leaflet.css";
+
 export const Map = () => {
   const [isOpen, setIsOpen] = useState(false);
 
