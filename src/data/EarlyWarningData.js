@@ -7,6 +7,14 @@ export const earlyWarningStatus = {
   NORMAL: 4,
 };
 
+export const earlyWarningStatusCode = {
+  ALL: 0,
+  STANDBY1: "Siaga 1",
+  STANDBY2: "Siaga 2",
+  STANDBY3: "Siaga 3",
+  NORMAL: "Normal",
+};
+
 export const initialEarlyWarningData = [
   {
     id: 1,
