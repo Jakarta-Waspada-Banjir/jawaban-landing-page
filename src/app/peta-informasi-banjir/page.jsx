@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import {
@@ -8,11 +10,14 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui";
-import { Map } from "@/modules/FloodInformationMap/Map";
 
 export const metadata = {
   title: "Peta Informasi Banjir",
 };
+
+const DynamicMap = dynamic(() => import("@/modules/FloodInformationMap/Map"), {
+  ssr: false,
+});
 
 const FloodInformationMap = () => {
   return (
@@ -46,7 +51,7 @@ const FloodInformationMap = () => {
           </div>
 
           <div className="mt-6">
-            <Map />
+            <DynamicMap />
           </div>
         </div>
       </div>
