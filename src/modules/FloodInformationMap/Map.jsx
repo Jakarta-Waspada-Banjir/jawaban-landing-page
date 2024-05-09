@@ -2,11 +2,9 @@
 
 import { ChevronsUpDown } from "lucide-react";
 import { useState } from "react";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 
 import {
-  EyeIcon,
-  EyeOffIcon,
   FloodPostIcon,
   ObservationPostIcon,
   PumpHouseIcon,
@@ -19,7 +17,6 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-  Toggle,
 } from "@/components/ui";
 
 import { FloodPostMarker } from "./Marker/FloodPostMarker";
@@ -33,7 +30,16 @@ import { ToggleableMarker } from "./ToggleableMarker";
 
 import "leaflet/dist/leaflet.css";
 
-export const Map = () => {
+const MapLoader = ({ setIsLoading }) => {
+  useMapEvents({
+    load: () => {
+      setIsLoading(false);
+    },
+  });
+  return null;
+};
+
+const Map = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [activeSluiceGatesMarker, setActiveSluiceGatesMarker] = useState(true);
@@ -170,3 +176,4 @@ export const Map = () => {
     </>
   );
 };
+export default Map;
