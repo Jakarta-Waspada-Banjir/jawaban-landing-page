@@ -8,7 +8,7 @@ const RelatedNewsCard = () => {
         <Image
           src="/images/edukasi-banjir-1.jpeg"
           fill
-          className="rounded-xl object-cover"
+          className="rounded-lg object-cover"
           alt="gatau males"
         />
       </div>
