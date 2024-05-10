@@ -9,7 +9,7 @@ import logoFooter from "/public/logo/jawaban-white.svg";
 export const Footer = () => {
   return (
     <footer className="mt-10 bg-primary">
-      <div className="mx-auto max-w-7xl px-4 pb-8 pt-16 sm:px-6 sm:pt-24 lg:px-8 lg:pt-16">
+      <div className="mx-auto max-w-7xl px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8 lg:pt-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-3">
             <Link href="/" className="inline-flex items-center">
@@ -55,7 +55,7 @@ export const Footer = () => {
                     Gedung A lantai 4
                   </span>
                   <p className="text-sm text-white">
-                    Jl. Puskesmas Kelurahan Duri Kepa
+                    Jl. Kramat Raya No. 212, Jakarta Pusat
                   </p>
                 </div>
               </div>
