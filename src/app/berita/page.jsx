@@ -6,7 +6,7 @@ import { useCallback } from "react";
 
 import { Button } from "@/components/ui";
 import { CarouselCount, useCarouselCount } from "@/modules/News/CarouselCount";
-import NewsCarousel from "@/modules/News/NewsCarousel2";
+import NewsCarousel from "@/modules/News/NewsCarousel";
 
 const News = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });

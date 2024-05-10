@@ -57,7 +57,7 @@ const NewsCarousel = () => {
                 </p>
               </div>
 
-              <div className="flex justify-between">
+              <div className="z-50 flex justify-between">
                 <Button className="w-min border border-white/30 bg-transparent p-5 hover:bg-primary hover:text-white">
                   Baca Selengkapnya
                 </Button>

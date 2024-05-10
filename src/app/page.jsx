@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { BannerCarousel } from "@/modules/Home/BannerCarousel";
 import { EarlyWarning } from "@/modules/Home/EarlyWarning";
-import { NewsCarousel } from "@/modules/Home/NewsCarousel";
 import { QuickAccess } from "@/modules/Home/QuickAccess";
 import { RelatedNews } from "@/modules/Home/RelatedNews";
 import { WaterLevel } from "@/modules/Home/WaterLevel";
@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <div className="pt-24 lg:pt-32">
-        <NewsCarousel />
+        <BannerCarousel />
         <EarlyWarning />
         <WaterLevel />
         <QuickAccess />
