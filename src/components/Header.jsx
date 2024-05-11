@@ -15,7 +15,7 @@ export const Header = ({ inMobileHidden = false, isTransparent = false }) => {
     <header
       id="header"
       className={cn(
-        "fixed left-0 right-0 top-0 z-50 w-full bg-white shadow-md",
+        "fixed left-0 right-0 top-0 z-50 w-full bg-white shadow-md transition-colors duration-300",
         {
           "hidden lg:block": inMobileHidden,
           "bg-gray-400 bg-opacity-10 bg-clip-padding backdrop-blur-md backdrop-filter":
@@ -23,11 +23,7 @@ export const Header = ({ inMobileHidden = false, isTransparent = false }) => {
         },
       )}
     >
-      <div
-        className={cn("h-full w-full", {
-          "bg-black/35": isTransparent,
-        })}
-      >
+      <div className="h-full w-full">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-4">
           <div className="relative flex flex-col space-y-4 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
             <div className="flex w-full items-center justify-between">
