@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 const NewsLayout = ({ children }) => {
   return (
     <>
-      <Header />
+      <Header isTransparent={true} />
       {children}
     </>
   );
