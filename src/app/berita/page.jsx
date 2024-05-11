@@ -1,11 +1,19 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback } from "react";
 
-import { Button } from "@/components/ui";
-import { CarouselCount, useCarouselCount } from "@/modules/News/CarouselCount";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui";
+import { NewsData } from "@/data/NewsData";
+import CarouselControl from "@/modules/News/CarouselControl";
+import { useCarouselCount } from "@/modules/News/CarouselCount";
 import NewsCarousel from "@/modules/News/NewsCarousel";
 
 const News = () => {
@@ -21,37 +29,50 @@ const News = () => {
 
   const { carouselCount, selectedCarousel } = useCarouselCount(emblaApi);
 
+  const filteredData = NewsData.filter((data) => data.isTrending);
+
   return (
-    <div className="relative overflow-hidden pt-28" ref={emblaRef}>
+    <div className="relative overflow-hidden" ref={emblaRef}>
       <div className="flex">
-        <NewsCarousel scrollNext={scrollNext} scrollPrev={scrollPrev} />
-        <NewsCarousel scrollNext={scrollNext} scrollPrev={scrollPrev} />
-        <NewsCarousel scrollNext={scrollNext} scrollPrev={scrollPrev} />
-      </div>
-      <div className="absolute bottom-11 left-0 flex w-full items-center justify-center">
-        <div className="flex items-center gap-1 rounded-full border border-gray-700 bg-gray-400 bg-opacity-10 bg-clip-padding text-xs text-white backdrop-blur-md backdrop-filter">
-          <Button
-            size="sm"
-            className="hover:bg-transparent hover:text-white/30"
-            variant="ghost"
-            onClick={scrollPrev}
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </Button>
-          <CarouselCount
-            carouselCount={carouselCount}
-            selectedCarousel={selectedCarousel}
+        {filteredData.map(({ id, image, tag, title, release_date, author }) => (
+          <NewsCarousel
+            key={id}
+            tag={tag}
+            title={title}
+            image={image}
+            author={author}
+            release_date={release_date}
           />
-          <Button
-            size="sm"
-            className="hover:bg-transparent hover:text-white/30"
-            variant="ghost"
-            onClick={scrollNext}
-          >
-            <ChevronRight className="h-5 w-5" />
-          </Button>
+        ))}
+      </div>
+      <div className="absolute top-24 w-full md:top-[116px] lg:top-[152px]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  className="text-white hover:text-white/80"
+                  href="/"
+                >
+                  Beranda
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="font-medium text-primary">
+                  Berita
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
         </div>
       </div>
+      <CarouselControl
+        carouselCount={carouselCount}
+        selectedCarousel={selectedCarousel}
+        scrollNext={scrollNext}
+        scrollPrev={scrollPrev}
+      />
     </div>
   );
 };
