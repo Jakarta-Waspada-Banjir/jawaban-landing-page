@@ -32,7 +32,7 @@ export const navigation = {
     {
       id: 2,
       name: "FAQ",
-      url: "/coming-soon",
+      url: "/faq",
     },
   ],
   practical_tips: [
