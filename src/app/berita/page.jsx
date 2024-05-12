@@ -1,79 +1,14 @@
-"use client";
-
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback } from "react";
-
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui";
-import { NewsData } from "@/data/NewsData";
-import CarouselControl from "@/modules/News/CarouselControl";
-import { useCarouselCount } from "@/modules/News/CarouselCount";
-import NewsCarousel from "@/modules/News/NewsCarousel";
+import HeadlineNews from "@/modules/News/HeadlineNews";
+import HighlightNews from "@/modules/News/HighlightNews";
+import LatestAndPopularNews from "@/modules/News/LatestAndPopularNews";
 
 const News = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-
-  const { carouselCount, selectedCarousel } = useCarouselCount(emblaApi);
-
-  const filteredData = NewsData.filter((data) => data.isTrending);
-
   return (
-    <div className="relative overflow-hidden" ref={emblaRef}>
-      <div className="flex">
-        {filteredData.map(({ id, image, tag, title, release_date, author }) => (
-          <NewsCarousel
-            key={id}
-            tag={tag}
-            title={title}
-            image={image}
-            author={author}
-            release_date={release_date}
-          />
-        ))}
-      </div>
-      <div className="absolute top-24 w-full md:top-[116px] lg:top-[152px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  className="text-white hover:text-white/80"
-                  href="/"
-                >
-                  Beranda
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="font-medium text-primary">
-                  Berita
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </div>
-      <CarouselControl
-        carouselCount={carouselCount}
-        selectedCarousel={selectedCarousel}
-        scrollNext={scrollNext}
-        scrollPrev={scrollPrev}
-      />
-    </div>
+    <>
+      <HeadlineNews />
+      <LatestAndPopularNews />
+      <HighlightNews />
+    </>
   );
 };
 

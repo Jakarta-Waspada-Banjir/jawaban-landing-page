@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
 const NewsLayout = ({ children }) => {
@@ -26,9 +27,8 @@ const NewsLayout = ({ children }) => {
   return (
     <>
       <Header isTransparent={isScrolling} />
-      <div ref={scrollRef} className="h-[2000px]">
-        {children}
-      </div>
+      <main ref={scrollRef}>{children}</main>
+      <Footer />
     </>
   );
 };
