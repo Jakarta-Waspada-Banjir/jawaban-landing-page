@@ -1,10 +1,15 @@
 import Image from "next/image";
 import { Calendar, PenLine } from "lucide-react";
 
+import { ModalShareSocialMedia } from "./ModalShareSocialMedia";
+
 const HighlightNews = () => {
   return (
     <section className="mx-auto my-8 max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
-      <h2 className="text-2xl font-medium text-gray-800">Sorotan</h2>
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl font-medium text-gray-800">Sorotan</h2>
+        <ModalShareSocialMedia />
+      </div>
       <div className="mt-5 flex gap-8">
         {/* kiri */}
         <div className="relative h-[600px] w-1/2 shrink-0">
