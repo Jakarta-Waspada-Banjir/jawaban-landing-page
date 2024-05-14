@@ -20,10 +20,10 @@ const LatestAndPopularNews = () => {
               <div className="flex h-28 p-3 lg:h-40 xl:h-48 xl:p-4">
                 <div className="flex h-full flex-col justify-between">
                   <div className="flex flex-col gap-1">
-                    <h5 className="text-xs font-semibold uppercase text-gray-500 xl:text-sm">
+                    <h5 className="text-xs font-medium uppercase text-gray-500 xl:text-sm">
                       {data.tag}
                     </h5>
-                    <h3 className="line-clamp-2 text-sm font-medium text-gray-700 lg:text-base xl:text-xl xl:font-semibold">
+                    <h3 className="line-clamp-2 text-sm font-medium text-gray-700 lg:text-base xl:text-xl">
                       {data.title}
                     </h3>
                   </div>
