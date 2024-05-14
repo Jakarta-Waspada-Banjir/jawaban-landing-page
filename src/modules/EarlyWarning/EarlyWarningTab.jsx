@@ -18,7 +18,6 @@ const earlyWarningStatus = {
   STANDBY1: 1,
   STANDBY2: 2,
   STANDBY3: 3,
-  NORMAL: 4,
 };
 
 export const EarlyWarningTab = () => {
@@ -75,12 +74,6 @@ export const EarlyWarningTab = () => {
             >
               Siaga 3
             </TabsTrigger>
-            <TabsTrigger
-              value={earlyWarningStatus.NORMAL}
-              className="mr-8 rounded-none border-primary px-0 pb-3 text-base font-medium data-[state=active]:border-b-2 data-[state=active]:bg-inherit data-[state=active]:text-primary data-[state=active]:shadow-none sm:pb-2 sm:text-lg"
-            >
-              Normal
-            </TabsTrigger>
           </TabsList>
         </div>
         {/* All */}
@@ -99,11 +92,8 @@ export const EarlyWarningTab = () => {
         <TabsContent value={earlyWarningStatus.STANDBY3}>
           <EarlyWarningList status={earlyWarningStatus.STANDBY3} />
         </TabsContent>
-        {/* Normal */}
-        <TabsContent value={earlyWarningStatus.NORMAL}>
-          <EarlyWarningList status={earlyWarningStatus.NORMAL} />
-        </TabsContent>
       </Tabs>
+      <p className="mt-2 text-right text-sm text-gray-500">Sumber: DSDA</p>
     </div>
   );
 };

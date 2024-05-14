@@ -5,7 +5,7 @@ import { EarlyWarning } from "@/modules/Home/EarlyWarning";
 import { NewsCarousel } from "@/modules/Home/NewsCarousel";
 import { QuickAccess } from "@/modules/Home/QuickAccess";
 import { RelatedNews } from "@/modules/Home/RelatedNews";
-import { WaterLevel } from "@/modules/Home/WaterLevel";
+import { WaterManagementTab } from "@/modules/Home/WaterManagement/WaterManagementTab";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <div className="pt-24 lg:pt-32">
         <NewsCarousel />
         <EarlyWarning />
-        <WaterLevel />
+        <WaterManagementTab />
         <QuickAccess />
         <RelatedNews />
         <ContactUs />
