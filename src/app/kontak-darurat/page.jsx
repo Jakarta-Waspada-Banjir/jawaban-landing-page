@@ -1,7 +1,5 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { InputWithLabel } from "@/components/InputWithLabel";
-import { TextareaWithLabel } from "@/components/TextAreaWithLabel";
 import {
   Accordion,
   AccordionContent,
@@ -70,7 +68,7 @@ const EmergencyContactPage = () => {
                 </div>
                 <div className="flex flex-col items-center border-b border-gray-200 p-4 md:border-b-0 md:border-r">
                   <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-5xl font-bold text-transparent">
-                    119
+                    113
                   </h2>
                   <p className="mt-2 text-center text-base text-gray-500 md:text-sm">
                     Pemadam Kebakaran
@@ -86,7 +84,7 @@ const EmergencyContactPage = () => {
                 </div>
                 <div className="flex flex-col items-center pt-4 md:pl-4">
                   <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-5xl font-bold text-transparent">
-                    118
+                    119
                   </h2>
                   <p className="mt-2 text-center text-base text-gray-500 md:text-sm">
                     Ambulan

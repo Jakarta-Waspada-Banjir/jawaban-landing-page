@@ -1,7 +1,3 @@
-"use client";
-
-import { useParams } from "next/navigation";
-
 import {
   Accordion,
   AccordionContent,
@@ -10,11 +6,13 @@ import {
 } from "@/components/ui";
 import { FloodControlData } from "@/data/FloodControlData";
 
-const FloodControlPage = () => {
-  const { authorities } = useParams();
+export const metadata = {
+  title: "Info Banjir",
+};
 
+const FloodControlPage = ({ params }) => {
   const filteredData = FloodControlData.find(
-    (data) => data.authorities === authorities,
+    (data) => data.authorities === params.authorities,
   );
 
   return (

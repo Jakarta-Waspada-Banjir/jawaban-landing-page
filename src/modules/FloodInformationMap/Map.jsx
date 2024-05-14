@@ -173,6 +173,8 @@ const Map = () => {
           </CollapsibleContent>
         </Collapsible>
       </div>
+
+      <p className="mt-2 text-right text-sm text-gray-500">Sumber: DSDA</p>
     </>
   );
 };

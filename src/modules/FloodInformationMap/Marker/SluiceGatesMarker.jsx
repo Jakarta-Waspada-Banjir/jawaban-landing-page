@@ -55,15 +55,12 @@ export const SluiceGatesMarker = ({ activeSluiceGatesMarker }) => {
                 <CardContent className="p-2">
                   <div className="mb-1.5 flex items-center justify-between gap-x-3">
                     <h5 className="text-sm font-semibold text-gray-600">
-                      {`${
-                        sluiceGates.properties.tanggal
-                          ? formatDate(
-                              sluiceGates.properties.tanggal,
-                              "dd MMMM yyy",
-                            )
-                          : "-"
-                      } | ${sluiceGates.properties.jam ?? "-"}
-                      `}
+                      {sluiceGates.properties.tanggal
+                        ? formatDate(
+                            `${sluiceGates.properties.tanggal}T${sluiceGates.properties.jam}`,
+                            "dd MMMM yyy | HH:mm",
+                          )
+                        : "-"}
                     </h5>
                     {/* Status */}
                     {sluiceGates.properties.status_siaga ? (

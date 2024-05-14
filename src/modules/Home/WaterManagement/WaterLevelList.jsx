@@ -1,41 +1,23 @@
 "use client";
 
-import {
-  ChevronDownCircleIcon,
-  ChevronRightCircleIcon,
-  ChevronUpCircleIcon,
-} from "lucide-react";
 import { useState } from "react";
 
 import { SearchIcon } from "@/components/icons";
 import { Badge, Input } from "@/components/ui";
-import { earlyWarningStatus } from "@/data/EarlyWarningData";
-import { initialWaterLevelData } from "@/data/HomeData";
+import { initialWaterLevelData, waterLevelStatus } from "@/data/HomeData";
 import { formatDate } from "@/utils";
 
-export const EarlyWarningList = ({ status }) => {
+export const WaterLevelList = () => {
   const [search, setSearch] = useState("");
   const handleSearch = (e) => setSearch(e.target.value);
 
-  const filteredEarlyWarningData = initialWaterLevelData.filter(
-    (earlyWarning) => {
-      const matchesStatus =
-        (status === 0 && [1, 2, 3].includes(earlyWarning.status_siaga)) ||
-        earlyWarning.status_siaga === status;
-
-      const matchesSearch =
-        earlyWarning.pintu_air.name
-          .toLowerCase()
-          .includes(search.toLowerCase()) ||
-        earlyWarning.pintu_air.aliran
-          .toLowerCase()
-          .includes(search.toLowerCase()) ||
-        earlyWarning.status.toLowerCase().includes(search.toLowerCase());
-
-      return matchesStatus && matchesSearch;
-    },
+  const filteredWaterLevelData = initialWaterLevelData.filter(
+    (data) =>
+      data.pintu_air.name.toLowerCase().includes(search.toLowerCase()) ||
+      data.category.toLowerCase().includes(search.toLowerCase()) ||
+      data.status.toLowerCase().includes(search.toLowerCase()) ||
+      data.pintu_air.aliran.toLowerCase().includes(search.toLowerCase()),
   );
-
   return (
     <div className="mt-6">
       <div className="rounded-md border-x border-t border-ternary-100 bg-white shadow lg:rounded-xl">
@@ -78,6 +60,9 @@ export const EarlyWarningList = ({ status }) => {
                       Aliran
                     </th>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
+                      Cuaca
+                    </th>
+                    <th className="whitespace-nowrap p-4 align-middle font-semibold">
                       Tinggi Muka Air
                     </th>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
@@ -85,52 +70,55 @@ export const EarlyWarningList = ({ status }) => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-ternary-100 text-sm font-medium text-gray-600">
-                  {filteredEarlyWarningData.length > 0 ? (
-                    filteredEarlyWarningData.map((earlyWarningData) => (
-                      <tr key={earlyWarningData.id}>
+                <tbody className="divide-y divide-ternary-100 font-medium text-gray-600">
+                  {filteredWaterLevelData.length > 0 ? (
+                    filteredWaterLevelData.map((waterLevelData) => (
+                      <tr key={waterLevelData.id}>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {earlyWarningData.pintu_air.name ?? "-"}
+                          {waterLevelData.pintu_air.name ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {earlyWarningData.category ?? "-"}
+                          {waterLevelData.category ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {earlyWarningData.tanggal
+                          {waterLevelData.tanggal
                             ? formatDate(
-                                `${earlyWarningData.tanggal}T${earlyWarningData.jam}`,
+                                `${waterLevelData.tanggal}T${waterLevelData.jam}`,
                                 "dd MMMM yyy | HH:mm:ss",
                               )
                             : "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {earlyWarningData.pintu_air.aliran ?? "-"}
+                          {waterLevelData.pintu_air.aliran ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {earlyWarningData.ketinggian
-                            ? earlyWarningData.ketinggian + " cm"
+                          {waterLevelData.cuaca.nama ?? "-"}
+                        </td>
+                        <td className="whitespace-nowrap p-4 align-middle">
+                          {waterLevelData.ketinggian
+                            ? waterLevelData.ketinggian + " cm"
                             : "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {earlyWarningData.status_siaga ? (
+                          {waterLevelData.status_siaga ? (
                             <Badge
                               variant={
-                                earlyWarningData.status_siaga ===
-                                earlyWarningStatus.STANDBY1
+                                waterLevelData.status_siaga ===
+                                waterLevelStatus.STANDBY1
                                   ? "destructive"
-                                  : earlyWarningData.status_siaga ===
-                                      earlyWarningStatus.STANDBY2
+                                  : waterLevelData.status_siaga ===
+                                      waterLevelStatus.STANDBY2
                                     ? "orange"
-                                    : earlyWarningData.status_siaga ===
-                                        earlyWarningStatus.STANDBY3
+                                    : waterLevelData.status_siaga ===
+                                        waterLevelStatus.STANDBY3
                                       ? "warning"
-                                      : earlyWarningData.status_siaga ===
-                                          earlyWarningStatus.NORMAL
+                                      : waterLevelData.status_siaga ===
+                                          waterLevelStatus.NORMAL
                                         ? "success"
                                         : "light"
                               }
                             >
-                              {earlyWarningData.status}
+                              {waterLevelData.status}
                             </Badge>
                           ) : (
                             "-"
@@ -140,7 +128,7 @@ export const EarlyWarningList = ({ status }) => {
                     ))
                   ) : (
                     <tr>
-                      <td colSpan="6" className="h-24 text-center">
+                      <td colSpan="7" className="h-24 text-center">
                         Data tidak ditemukan
                       </td>
                     </tr>
@@ -148,32 +136,6 @@ export const EarlyWarningList = ({ status }) => {
                 </tbody>
               </table>
             </div>
-          </div>
-
-          {/* Keterangan */}
-          <div className="mt-5">
-            <h3 className="text-sm font-medium italic text-gray-400">
-              *Keterangan
-            </h3>
-            <table className="mt-2 text-left align-top text-sm text-slate-700 sm:text-base">
-              <tbody className="text-sm font-medium text-gray-600">
-                <tr>
-                  <td className="whitespace-nowrap p-2 text-center align-middle">
-                    P.S.
-                  </td>
-                  <td className="p-2 align-middle">
-                    Peil Scale{" "}
-                    <span className="italic">(Alat ukur tinggi muka air)</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="whitespace-nowrap p-2 text-center align-middle">
-                    P.A.
-                  </td>
-                  <td className="p-2 align-middle">Pintu Air</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

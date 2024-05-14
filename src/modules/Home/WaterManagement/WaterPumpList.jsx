@@ -3,27 +3,21 @@
 import { useState } from "react";
 
 import { SearchIcon } from "@/components/icons";
-import { Badge, Input } from "@/components/ui";
-import { initialWaterLevelData, waterLevelStatus } from "@/data/HomeData";
+import { Input } from "@/components/ui";
+import { initialWaterPumpData } from "@/data/HomeData";
 import { formatDate } from "@/utils";
 
-export const WaterLevel = () => {
+export const WaterPumpList = () => {
   const [search, setSearch] = useState("");
   const handleSearch = (e) => setSearch(e.target.value);
 
-  const filteredWaterLevelData = initialWaterLevelData.filter(
+  const filteredWaterPumpData = initialWaterPumpData.filter(
     (data) =>
-      data.name.toLowerCase().includes(search.toLowerCase()) ||
-      data.category.toLowerCase().includes(search.toLowerCase()) ||
-      data.status.toLowerCase().includes(search.toLowerCase()) ||
-      data.weather.toLowerCase().includes(search.toLowerCase()) ||
-      data.water_flow.toLowerCase().includes(search.toLowerCase()),
+      data.pompa_air.name.toLowerCase().includes(search.toLowerCase()) ||
+      data.cuaca.nama.toLowerCase().includes(search.toLowerCase()),
   );
   return (
-    <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
-      <h1 className="mb-6 text-2xl font-semibold text-gray-700 md:text-3xl">
-        Data Tinggi Muka Air
-      </h1>
+    <div className="mt-6">
       <div className="rounded-md border-x border-t border-ternary-100 bg-white shadow lg:rounded-xl">
         {/* Search */}
         <div className="px-4 pb-7 pt-5">
@@ -52,88 +46,57 @@ export const WaterLevel = () => {
                 <thead className="sticky top-0 bg-primary text-white">
                   <tr>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
-                      Nama
-                    </th>
-                    <th className="whitespace-nowrap p-4 align-middle font-semibold">
-                      Kategori
+                      Wilayah
                     </th>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
                       Tanggal
                     </th>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
-                      Waktu
-                    </th>
-                    <th className="whitespace-nowrap p-4 align-middle font-semibold">
-                      Aliran
-                    </th>
-                    <th className="whitespace-nowrap p-4 align-middle font-semibold">
                       Cuaca
                     </th>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
-                      Tinggi Air
+                      Total Pompa
                     </th>
                     <th className="whitespace-nowrap p-4 align-middle font-semibold">
-                      Status
+                      Beroperasi
+                    </th>
+                    <th className="whitespace-nowrap p-4 align-middle font-semibold">
+                      Disiagakan
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-ternary-100 font-medium text-gray-600">
-                  {filteredWaterLevelData.length > 0 ? (
-                    filteredWaterLevelData.map((waterLevelData) => (
-                      <tr key={waterLevelData.id}>
+                  {filteredWaterPumpData.length > 0 ? (
+                    filteredWaterPumpData.map((waterPumpData) => (
+                      <tr key={waterPumpData.id}>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.name ?? "-"}
+                          {waterPumpData.pompa_air.name ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.category ?? "-"}
-                        </td>
-                        <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.date
-                            ? formatDate(waterLevelData.date, "dd MMMM yyy")
+                          {waterPumpData.tanggal
+                            ? formatDate(
+                                `${waterPumpData.tanggal}T${waterPumpData.jam}`,
+                                "dd MMMM yyy | HH:mm:ss",
+                              )
                             : "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.time ?? "-"}
+                          {waterPumpData.cuaca.nama ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.water_flow ?? "-"}
+                          {waterPumpData.total_pompa ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.weather ?? "-"}
+                          {waterPumpData.pompa_operasi ?? "-"}
                         </td>
                         <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.water_height ?? "-"}
-                        </td>
-                        <td className="whitespace-nowrap p-4 align-middle">
-                          {waterLevelData.status_code ? (
-                            <Badge
-                              variant={
-                                waterLevelData.status_code ===
-                                waterLevelStatus.STANDBY1
-                                  ? "destructive"
-                                  : waterLevelData.status_code ===
-                                      waterLevelStatus.STANDBY2
-                                    ? "orange"
-                                    : waterLevelData.status_code ===
-                                        waterLevelStatus.STANDBY3
-                                      ? "warning"
-                                      : waterLevelData.status_code ===
-                                          waterLevelStatus.NORMAL
-                                        ? "success"
-                                        : "light"
-                              }
-                            >
-                              {waterLevelData.status}
-                            </Badge>
-                          ) : (
-                            "-"
-                          )}
+                          {waterPumpData.pompa_siaga ?? "-"}
                         </td>
                       </tr>
                     ))
                   ) : (
                     <tr>
-                      <td colSpan="8" className="h-24 text-center">
+                      <td colSpan="6" className="h-24 text-center">
                         Data tidak ditemukan
                       </td>
                     </tr>
@@ -141,6 +104,22 @@ export const WaterLevel = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+          {/* Keterangan */}
+          <div className="mt-5">
+            <h3 className="text-sm font-medium italic text-gray-400">
+              *Keterangan
+            </h3>
+            <ul className="ml-4 mt-2 list-disc text-sm text-gray-600">
+              <li className="mb-1.5">
+                Pompa air memiliki pengoperasiannya yang berbeda sesuai dengan
+                ketinggian muka air di tiap aliran sungai.
+              </li>
+              <li>
+                Pompa air tidak bisa dioperasikan serentak secara terus menerus
+                (pompa dinyalakan bergantian) untuk menghindari kerusakan.
+              </li>
+            </ul>
           </div>
         </div>
       </div>

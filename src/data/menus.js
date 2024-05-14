@@ -18,16 +18,11 @@ export const menus = [
     items: [
       {
         id: 1,
-        name: "Info banjir",
+        name: "Info Banjir",
         url: "/info-banjir#header",
       },
       {
         id: 2,
-        name: "Edukasi Bencana",
-        url: "/edukasi-bencana",
-      },
-      {
-        id: 3,
         name: "Peringatan Dini",
         url: "/peringatan-dini",
       },
