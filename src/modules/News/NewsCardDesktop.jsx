@@ -12,15 +12,19 @@ const NewsCardDesktop = ({ tag }) => {
       <h4 className="text-sm font-semibold uppercase text-white">
         Berita Terkait
       </h4>
-      {filteredNews.map(({ image, tag, title, release_date, id }) => (
-        <RelatedNewsCard
-          key={id}
-          images={image}
-          release_date={release_date}
-          tag={tag}
-          title={title}
-        />
-      ))}
+      {filteredNews.map(
+        ({ image, tag, title, release_date, id, viewed, slug }) => (
+          <RelatedNewsCard
+            key={id}
+            tag={tag}
+            slug={slug}
+            title={title}
+            images={image}
+            viewed={viewed}
+            release_date={release_date}
+          />
+        ),
+      )}
     </div>
   );
 };

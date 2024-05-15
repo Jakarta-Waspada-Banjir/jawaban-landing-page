@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { NewsData } from "@/data/NewsData";
+import { formatDate } from "@/utils";
 
 import RelatedNewsCard from "./RelatedNewsCard";
 
@@ -12,8 +14,9 @@ const LatestAndPopularNews = () => {
           Berita Terbaru
         </h2>
         <div className="mt-3 flex flex-col gap-5 lg:mt-5 lg:gap-7 xl:gap-8">
-          {NewsData.slice(2, 6).map((data) => (
-            <div
+          {NewsData.map((data) => (
+            <Link
+              href={`/berita/${data.slug}`}
               key={data.id}
               className="flex cursor-pointer gap-3 rounded-xl border border-gray-200 transition duration-300 hover:shadow-lg xl:gap-5"
             >
@@ -28,16 +31,10 @@ const LatestAndPopularNews = () => {
                     </h3>
                   </div>
                   <p className="hidden text-gray-500 lg:line-clamp-2 lg:text-sm xl:text-base">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam exercitationem magni voluptate obcaecati quis
-                    corrupti eos at incidunt assumenda enim sapiente corporis
-                    explicabo et possimus fugiat aliquam, ad iste natus iusto
-                    quasi ullam dolore? Consequuntur et sit ipsam libero sequi?
-                    Voluptatibus aliquam nemo possimus illum natus saepe
-                    consectetur qui iusto.
+                    {data.content[0].text}
                   </p>
                   <div className="flex gap-5 text-xs text-gray-500 xl:text-sm">
-                    <p>{data.release_date}</p>
+                    <p>{formatDate(data.release_date, "EEEE, dd MMMM yyy")}</p>
                     <p>Penulis: {data.author}</p>
                   </div>
                 </div>
@@ -50,7 +47,7 @@ const LatestAndPopularNews = () => {
                   fill
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -61,9 +58,11 @@ const LatestAndPopularNews = () => {
         </h2>
         <div className="mt-3 rounded-xl border p-3 shadow-xl lg:mt-5">
           {NewsData.slice(0, 5).map(
-            ({ image, tag, title, release_date, id }) => (
+            ({ image, tag, title, release_date, id, viewed, slug }) => (
               <RelatedNewsCard
                 isPopularVariant
+                slug={slug}
+                viewed={viewed}
                 key={id}
                 images={image}
                 release_date={release_date}

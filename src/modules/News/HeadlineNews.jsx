@@ -35,16 +35,19 @@ const HeadlineNews = () => {
   return (
     <section className="relative overflow-hidden" ref={emblaRef}>
       <div className="flex">
-        {filteredData.map(({ id, image, tag, title, release_date, author }) => (
-          <NewsCarousel
-            key={id}
-            tag={tag}
-            title={title}
-            image={image}
-            author={author}
-            release_date={release_date}
-          />
-        ))}
+        {filteredData.map(
+          ({ id, image, tag, title, release_date, author, slug }) => (
+            <NewsCarousel
+              slug={slug}
+              key={id}
+              tag={tag}
+              title={title}
+              image={image}
+              author={author}
+              release_date={release_date}
+            />
+          ),
+        )}
       </div>
       <div className="absolute top-24 w-full md:top-[116px] lg:top-[152px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

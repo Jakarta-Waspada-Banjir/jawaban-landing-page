@@ -1,11 +1,13 @@
+import Link from "next/link";
 import { Calendar, PenLine } from "lucide-react";
 
 import { Button } from "@/components/ui";
+import { formatDate } from "@/utils";
 
 import NewsCardDesktop from "./NewsCardDesktop";
 import NewsCardMobile from "./NewsCardMobile";
 
-const NewsCarousel = ({ image, tag, title, release_date, author }) => {
+const NewsCarousel = ({ image, tag, title, release_date, author, slug }) => {
   return (
     <div
       style={{ backgroundImage: `url('${image}')` }}
@@ -18,14 +20,14 @@ const NewsCarousel = ({ image, tag, title, release_date, author }) => {
               <h5 className="-mb-4 text-sm uppercase text-white/60 xl:text-base">
                 {tag}
               </h5>
-              <h3 className="font-serif text-lg font-medium text-white/90 md:text-2xl lg:text-3xl xl:text-4xl">
+              <h3 className="font-serif text-lg font-medium text-white/90 md:text-2xl lg:text-3xl">
                 {title}
               </h3>
 
               <div className="flex gap-2 text-sm text-white/60">
                 <p className="flex gap-2">
                   <Calendar className="h-5 w-5" />
-                  {release_date}
+                  {formatDate(release_date, "EEEE, dd MMMM yyy")}
                 </p>
                 |
                 <p className="flex gap-2">
@@ -35,8 +37,11 @@ const NewsCarousel = ({ image, tag, title, release_date, author }) => {
               </div>
 
               <div className="z-50 flex justify-between">
-                <Button className="w-full border border-white/30 bg-transparent p-5 hover:bg-primary hover:text-white md:w-min">
-                  Baca Selengkapnya
+                <Button
+                  className="w-full border border-white/30 bg-transparent p-5 hover:bg-primary hover:text-white md:w-min"
+                  asChild
+                >
+                  <Link href={`/berita/${slug}`}>Baca Selengkapnya</Link>
                 </Button>
               </div>
             </div>

@@ -21,9 +21,10 @@ const NewsCardMobile = ({ tag }) => {
       </h4>
       <div className="relative overflow-hidden" ref={emblaRef}>
         <div className="flex h-24 flex-col">
-          {filteredNews.map(({ image, tag, title, release_date, id }) => (
+          {filteredNews.map(({ image, tag, title, release_date, id, slug }) => (
             <RelatedNewsCard
               key={id}
+              slug={slug}
               images={image}
               release_date={release_date}
               tag={tag}
