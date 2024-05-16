@@ -20,7 +20,7 @@ const NewsDetail = ({ params }) => {
             <Image
               src={selectedData.image}
               width={0}
-              className="h-[450px] w-full object-cover"
+              className="h-auto w-full object-cover"
               height={0}
               sizes="100vw"
               alt={selectedData.title}

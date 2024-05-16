@@ -12,8 +12,9 @@ const NewsCardDesktop = ({ tag }) => {
       <h4 className="text-sm font-semibold uppercase text-white">
         Berita Terkait
       </h4>
-      {filteredNews.map(
-        ({ image, tag, title, release_date, id, viewed, slug }) => (
+      {filteredNews
+        .slice(0, 4)
+        .map(({ image, tag, title, release_date, id, viewed, slug }) => (
           <RelatedNewsCard
             key={id}
             tag={tag}
@@ -23,8 +24,7 @@ const NewsCardDesktop = ({ tag }) => {
             viewed={viewed}
             release_date={release_date}
           />
-        ),
-      )}
+        ))}
     </div>
   );
 };
