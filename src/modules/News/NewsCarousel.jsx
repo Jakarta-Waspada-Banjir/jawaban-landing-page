@@ -13,7 +13,7 @@ const NewsCarousel = ({ image, tag, title, release_date, author, slug }) => {
       style={{ backgroundImage: `url('${image}')` }}
       className={`w-screen flex-shrink-0 bg-cover bg-bottom md:bg-top`}
     >
-      <div className="h-full w-full bg-black/60 pt-20 lg:pt-28">
+      <div className="h-full w-full bg-black/60 pt-20 lg:pt-[85px]">
         <div className="mx-auto flex h-full max-w-7xl flex-col justify-between gap-5 px-4 py-16 sm:px-6 md:flex-row md:gap-14 md:py-10 lg:px-8 xl:gap-12">
           <div className="flex flex-col justify-end">
             <div className="flex flex-col gap-5">
