@@ -9,7 +9,7 @@ import logoFooter from "/public/logo/jawaban-white.svg";
 export const Footer = () => {
   return (
     <footer className="mt-10 bg-primary">
-      <div className="mx-auto max-w-7xl px-4 pb-8 pt-16 sm:px-6 sm:pt-24 lg:px-8 lg:pt-16">
+      <div className="mx-auto max-w-7xl px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8 lg:pt-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-3">
             <Link href="/" className="inline-flex items-center">
@@ -28,24 +28,24 @@ export const Footer = () => {
               {/* Phone Number */}
               <div className="flex items-center gap-3">
                 <PhoneIcon className="h-5 w-5 text-white" />
-                <a
+                <Link
                   href="tel:+62215000000"
                   target="_blank"
                   className="text-sm leading-6 text-white"
                 >
                   +62 21 5000 0000
-                </a>
+                </Link>
               </div>
               {/* Email */}
               <div className="flex items-center gap-3">
                 <MailIcon className="h-5 w-5 text-white" />
-                <a
+                <Link
                   href="mailto:jawaban@jakarta.go.id"
                   target="_blank"
                   className="text-sm leading-6 text-white hover:text-white"
                 >
                   jawaban@jakarta.go.id
-                </a>
+                </Link>
               </div>
               {/* Location */}
               <div className="flex items-start gap-3">
@@ -54,9 +54,9 @@ export const Footer = () => {
                   <span className="text-sm font-semibold leading-normal text-white">
                     Gedung A lantai 4
                   </span>
-                  <p className="text-sm text-white">
-                    Jl. Puskesmas Kelurahan Duri Kepa
-                  </p>
+                  <Link href="#" className="text-sm text-white">
+                    Jl. Kramat Raya No. 212, Jakarta Pusat
+                  </Link>
                 </div>
               </div>
             </div>
