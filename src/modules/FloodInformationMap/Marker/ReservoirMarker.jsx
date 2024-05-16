@@ -46,7 +46,7 @@ export const ReservoirMarker = ({ activeReservoirMarker }) => {
           >
             <Popup className="m-0">
               <Card>
-                <CardHeader className="rounded-t-lg bg-[#4B84A3] p-0">
+                <CardHeader className="rounded-t-lg bg-[#A95E13] p-0">
                   <h3 className="p-2 text-center text-sm font-semibold text-white">
                     Waduk {removeWord(reservoir.properties.nama_waduk, "Waduk")}
                   </h3>

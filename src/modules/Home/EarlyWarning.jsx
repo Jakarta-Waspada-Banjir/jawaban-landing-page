@@ -1,31 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ChevronDownCircleIcon,
-  ChevronRightCircleIcon,
-  ChevronUpCircleIcon,
-} from "lucide-react";
 
 import { BoxArrowUpRightIcon, FloodIcon } from "@/components/icons";
-import {
-  Badge,
-  Button,
-  Card,
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui";
+import { Badge, Button, Card } from "@/components/ui";
 import {
   earlyWarningStatus,
   initialEarlyWarningData,
 } from "@/data/EarlyWarningData";
+import { initialWaterLevelData } from "@/data/HomeData";
 import { formatDate } from "@/utils";
 
 export const EarlyWarning = () => {
-  const filteredEarlyWarningData = initialEarlyWarningData
+  const filteredEarlyWarningData = initialWaterLevelData
     .filter(
-      (earlyWarning) => earlyWarning.status_code !== earlyWarningStatus.NORMAL,
+      (earlyWarning) => earlyWarning.status_siaga !== earlyWarningStatus.NORMAL,
     )
     .slice(0, 3);
 
@@ -61,23 +49,26 @@ export const EarlyWarning = () => {
               <Card className="p-4 duration-200 ease-in-out group-hover:border-primary group-hover:bg-primary/10">
                 <div className="mb-1.5 flex items-center justify-between">
                   <h5 className="text-sm font-medium text-gray-400">
-                    {earlyWarning.date
-                      ? formatDate(earlyWarning.date, "dd MMMM yyy | HH:mm") +
-                        " WIB"
+                    {earlyWarning.tanggal
+                      ? formatDate(
+                          `${earlyWarning.tanggal}T${earlyWarning.jam}`,
+                          "dd MMMM yyy | HH:mm:ss",
+                        ) + " WIB"
                       : "-"}
                   </h5>
-                  {earlyWarning.status_code ? (
+                  {earlyWarning.status_siaga ? (
                     <Badge
                       variant={
-                        earlyWarning.status_code === earlyWarningStatus.STANDBY1
+                        earlyWarning.status_siaga ===
+                        earlyWarningStatus.STANDBY1
                           ? "destructive"
-                          : earlyWarning.status_code ===
+                          : earlyWarning.status_siaga ===
                               earlyWarningStatus.STANDBY2
                             ? "orange"
-                            : earlyWarning.status_code ===
+                            : earlyWarning.status_siaga ===
                                 earlyWarningStatus.STANDBY3
                               ? "warning"
-                              : earlyWarning.status_code ===
+                              : earlyWarning.status_siaga ===
                                   earlyWarningStatus.NORMAL
                                 ? "success"
                                 : "light"
@@ -90,64 +81,20 @@ export const EarlyWarning = () => {
                   )}
                 </div>
                 <h1 className="line-clamp-2 text-lg font-bold text-gray-800 duration-200 ease-in-out group-hover:text-primary">
-                  {earlyWarning.name ?? "-"}
+                  {earlyWarning.pintu_air.name ?? "-"}
                 </h1>
                 <h4 className="line-clamp-2 font-medium text-gray-600">
-                  {earlyWarning.location ?? "-"}
+                  {earlyWarning.pintu_air.aliran ?? "-"}
                 </h4>
                 <div className="mt-3 flex items-center justify-between">
                   <div className="flex items-center">
                     <FloodIcon className="h-auto w-9 text-primary" />
                     <p className="ml-3 text-lg font-semibold text-gray-700">
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            <div className="flex items-center">
-                              {earlyWarning.water_level
-                                ? earlyWarning.water_level + " cm"
-                                : "-"}
-                            </div>
-                          </TooltipTrigger>
-                          <TooltipContent className="font-normal">
-                            Tinggi Air Saat Ini
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
+                      {earlyWarning.ketinggian
+                        ? earlyWarning.ketinggian + " cm"
+                        : "-"}
                     </p>
                   </div>
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <div className="flex items-center">
-                          {earlyWarning.water_level >
-                            earlyWarning.previous_water_level && (
-                            <ChevronUpCircleIcon className="h-auto w-8 rounded-full bg-red-500 p-0.5 text-white" />
-                          )}
-
-                          {earlyWarning.water_level <
-                            earlyWarning.previous_water_level && (
-                            <ChevronDownCircleIcon className="h-auto w-8 rounded-full bg-green-500 p-0.5 text-white" />
-                          )}
-
-                          {earlyWarning.water_level ==
-                            earlyWarning.previous_water_level && (
-                            <ChevronRightCircleIcon className="h-auto w-8 rounded-full bg-primary p-0.5 text-white" />
-                          )}
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        {earlyWarning.water_level >
-                          earlyWarning.previous_water_level &&
-                          "Tinggi Air Meningkat"}
-                        {earlyWarning.water_level <
-                          earlyWarning.previous_water_level &&
-                          "Tinggi Air Menurun"}
-                        {earlyWarning.water_level ==
-                          earlyWarning.previous_water_level &&
-                          "Tinggi Air Tetap"}
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
                 </div>
               </Card>
             </Link>
@@ -167,12 +114,13 @@ export const EarlyWarning = () => {
             Tidak ada informasi Peringatan Dini
           </h2>
           <p className="mt-3 text-sm text-ternary-500 sm:text-base">
-            Tidak ada peringatan dini yang dikeluarkan pada saat ini. Kami terus
-            memantau kondisi dan akan memberitahu Anda jika ada perubahan yang
-            memerlukan perhatian.
+            Kami akan terus memantau kondisi dan memberitahu Anda jika ada
+            perubahan yang memerlukan perhatian.
           </p>
         </div>
       )}
+
+      <p className="mt-2 text-right text-sm text-gray-500">Sumber: DSDA</p>
     </div>
   );
 };

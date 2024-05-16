@@ -8,6 +8,10 @@ import { Separator } from "@/components/ui/separator";
 import { FloodControlData } from "@/data/FloodControlData";
 import FloodControlMenu from "@/modules/FloodInformation/FloodControlMenu";
 
+export const metadata = {
+  title: "Info Banjir",
+};
+
 const FloodControlPage = () => {
   const filteredData = FloodControlData.find(
     (data) => data.authorities === "pemerintah",
