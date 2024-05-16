@@ -9,7 +9,7 @@ import { FloodControlData } from "@/data/FloodControlData";
 import FloodControlMenu from "@/modules/FloodInformation/FloodControlMenu";
 
 export const metadata = {
-  title: "Info Banjir",
+  title: "Informasi Banjir",
 };
 
 const FloodControlPage = () => {

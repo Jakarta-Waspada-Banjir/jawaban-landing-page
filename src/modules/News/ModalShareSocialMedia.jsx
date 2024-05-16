@@ -22,35 +22,41 @@ import {
   Button,
 } from "@/components/ui";
 import { Separator } from "@/components/ui/separator";
+import { useToast } from "@/components/ui/use-toast";
 import { BASE_URL } from "@/config";
 import { cn } from "@/lib/utils";
 
-export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
+export const ModalShareSocialMedia = ({ inMobileHidden = false, data }) => {
+  const { toast } = useToast();
   const [isClicked, setIsClicked] = useState(false);
   const pathName = usePathname();
   const url = BASE_URL + pathName;
 
-  const copyToClipboard = (slug) => {
-    const linkUrl = url + "/" + slug;
-
+  const copyToClipboard = () => {
     if (!isClicked) {
       setIsClicked(true);
       navigator.clipboard
-        .writeText(linkUrl)
+        .writeText(url)
         .then(() => {
-          alert("Link berhasil disalin!");
+          toast({
+            variant: "success",
+            description: "Link berhasil di salin.",
+          });
           setTimeout(() => {
             setIsClicked(false);
           }, 2000);
         })
         .catch(() => {
-          alert("Gagal menyalin link!");
+          toast({
+            variant: "destructive",
+            description: "Gagal menyalin link.",
+          });
           setIsClicked(false);
         });
     }
   };
 
-  const whatsappShare = (title) => {
+  const whatsappShare = ({ title }) => {
     const message = title + "\n" + url;
     const textTemplate = encodeURIComponent(message);
 
@@ -61,7 +67,7 @@ export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
     );
   };
 
-  const twitterShare = (title) => {
+  const twitterShare = ({ title }) => {
     const message = title + "\n" + url;
     const textTemplate = encodeURIComponent(message);
 
@@ -72,7 +78,7 @@ export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
     );
   };
 
-  const emailShare = (title) => {
+  const emailShare = ({ title }) => {
     const message = title + "\n" + url;
     const textTemplate = encodeURIComponent(message);
 
@@ -108,14 +114,13 @@ export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
           </AlertDialogTitle>
           <Separator className="bg-gray-300" />
           <h4 className="line-clamp-3 pb-2 text-left text-sm font-bold text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-            laudantium?
+            {data?.title ?? "-"}
           </h4>
 
           <div className="flex items-center justify-start gap-x-4 overflow-x-auto">
             <div>
               <button
-                onClick={() => copyToClipboard("website-banjir")}
+                onClick={() => copyToClipboard()}
                 disabled={isClicked}
                 className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-gray-600/15 p-2 transition-colors duration-150 ease-in-out hover:bg-gray-600/20 md:h-12 md:w-12"
               >
@@ -124,9 +129,7 @@ export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
             </div>
             <div>
               <button
-                onClick={() =>
-                  emailShare("ini adalah website banjir yang bagus")
-                }
+                onClick={() => emailShare({ title: data.title ?? "-" })}
                 className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-[#ea4335]/15 p-2 transition-colors duration-150 ease-in-out hover:bg-[#ea4335]/20 md:h-12 md:w-12"
               >
                 <GmailColorIcon className="h-5 w-5" />
@@ -142,9 +145,7 @@ export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
             </div>
             <div>
               <button
-                onClick={() =>
-                  twitterShare("ini adalah website banjir yang bagus")
-                }
+                onClick={() => twitterShare({ title: data.title ?? "-" })}
                 className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-gray-400/15 p-2 transition-colors duration-150 ease-in-out hover:bg-gray-400/20 md:h-12 md:w-12"
               >
                 <TwitterColorIcon className="h-4 w-4" />
@@ -152,9 +153,7 @@ export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
             </div>
             <div>
               <button
-                onClick={() =>
-                  whatsappShare("ini adalah website banjir yang bagus")
-                }
+                onClick={() => whatsappShare({ title: data.title ?? "-" })}
                 className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-[#60d669]/15 p-2 transition-colors duration-150 ease-in-out hover:bg-[#60d669]/20 md:h-12 md:w-12"
               >
                 <WhatsappColorIcon className="h-5 w-5" />

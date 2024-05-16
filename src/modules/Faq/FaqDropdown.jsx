@@ -19,7 +19,7 @@ export const FaqDropdown = ({ datas }) => {
             <AccordionContent className="border-t border-ternary-200 shadow-[inset_0px_3px_20px_0px_rgb(0,0,0,0.1)]">
               <div className="px-6">
                 <div
-                  className="prose prose-sm mt-4 w-full"
+                  className="prose prose-sm mt-4 max-w-[100ch]"
                   dangerouslySetInnerHTML={{
                     __html: data.answer,
                   }}

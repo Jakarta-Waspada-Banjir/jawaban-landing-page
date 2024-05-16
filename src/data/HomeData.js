@@ -2,6 +2,7 @@ import {
   DisasterMapIcon,
   EmergencyCallIcon,
   FloodInformationIcon,
+  NewspaperIcon,
   QuestionAnswerIcon,
 } from "@/components/icons";
 
@@ -10,7 +11,7 @@ export const initialNewsCarousel = [
     id: 1,
     title: "Warga membersihkan rumahnya setelah banjir",
     url_image: "/images/carousel-home/carousel-1.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod semper felis, et luctus nisi.",
@@ -19,7 +20,7 @@ export const initialNewsCarousel = [
     id: 2,
     title: "Banjir di Jakarta, apa yang harus kamu lakukan?",
     url_image: "/images/carousel-home/carousel-2.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod semper felis, et luctus nisi.",
@@ -28,7 +29,7 @@ export const initialNewsCarousel = [
     id: 3,
     title: "Dinas Sumber Daya Air DKI Jakarta membersihkan kali",
     url_image: "/images/carousel-home/carousel-3.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod semper felis, et luctus nisi.",
@@ -714,34 +715,43 @@ export const initialWaterPumpData = [
 export const initialQuickAccess = [
   {
     id: 1,
-    title: "Kontak Darurat",
-    url: "/kontak-darurat",
-    description: "Hubungi layanan darurat dan bantuan kapan saja diperlukan.",
-    icon: <EmergencyCallIcon className="mb-3 h-auto w-8" />,
-  },
-  {
-    id: 2,
-    title: "Info Banjir",
-    url: "/info-banjir",
+    title: "Informasi Banjir",
+    url: "/informasi-banjir",
     description:
       "Dapatkan informasi terkini mengenai kondisi banjir di Jakarta",
     icon: <FloodInformationIcon className="mb-3 h-7 w-7" />,
   },
   {
-    id: 3,
-    title: "Peta Bencana",
+    id: 2,
+    title: "Peta Informasi Banjir",
     url: "/peta-informasi-banjir",
     description:
       "Menyediakan visualisasi komprehensif dan terperinci tentang area-area yang berisiko banjir",
     icon: <DisasterMapIcon className="mb-3 h-7 w-7" />,
   },
   {
+    id: 3,
+    title: "Berita",
+    url: "/berita",
+    description:
+      "Dapatkan berita terbaru dan terkini seputar bencana banjir, penanggulangan, serta pencegahannya",
+    icon: <NewspaperIcon className="mb-3 h-7 w-7" />,
+  },
+  {
     id: 4,
     title: "Tanya Jawab",
-    url: "/faq",
+    url: "/tanya-jawab",
     description:
       "Temukan jawaban atas pertanyaan seputar bencana dan penanganannya.",
     icon: <QuestionAnswerIcon className="mb-3 h-auto w-10" />,
+  },
+  {
+    id: 5,
+    title: "Kontak Darurat",
+    url: "/kontak-darurat",
+    description:
+      "Hubungi layanan darurat dan bantuan kapan saja jika diperlukan.",
+    icon: <EmergencyCallIcon className="mb-3 h-auto w-8" />,
   },
 ];
 // ----------------------- End Quick Access -----------------------
@@ -754,7 +764,7 @@ export const initialRelatedNews = [
     description:
       "Badan Meteorologi, Klimatologi dan Geofisika (BMKG) memprediksi hujan berintensitas ringan hingga sedang mengguyur Jakarta hari ini. Dikutip dari laman resmi BMKG, Kamis (29/2), pada pagi hari cuaca berawan tebal hingga hujan berintensitas sedang diprediksi menaungi wilayah Jakarta Utara, Jakarta Pusat, Jakarta Timur, Jakarta Barat, Jakarta Selatan, dan Kepulauan Seribu.",
     url_image: "/images/carousel-home/carousel-1.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     updated_at: "2024-03-31T06:22:25.557035+07:00",
   },
@@ -764,7 +774,7 @@ export const initialRelatedNews = [
     description:
       "Badan Meteorologi, Klimatologi dan Geofisika (BMKG) memprediksi hujan berintensitas ringan hingga sedang mengguyur Jakarta hari ini. Dikutip dari laman resmi BMKG, Kamis (29/2), pada pagi hari cuaca berawan tebal hingga hujan berintensitas sedang diprediksi menaungi wilayah Jakarta Utara, Jakarta Pusat, Jakarta Timur, Jakarta Barat, Jakarta Selatan, dan Kepulauan Seribu.",
     url_image: "/images/carousel-home/carousel-1.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     updated_at: "2024-03-31T06:22:25.557035+07:00",
   },
@@ -774,7 +784,7 @@ export const initialRelatedNews = [
     description:
       "Badan Meteorologi, Klimatologi dan Geofisika (BMKG) memprediksi hujan berintensitas ringan hingga sedang mengguyur Jakarta hari ini. Dikutip dari laman resmi BMKG, Kamis (29/2), pada pagi hari cuaca berawan tebal hingga hujan berintensitas sedang diprediksi menaungi wilayah Jakarta Utara, Jakarta Pusat, Jakarta Timur, Jakarta Barat, Jakarta Selatan, dan Kepulauan Seribu.",
     url_image: "/images/carousel-home/carousel-1.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     updated_at: "2024-03-31T06:22:25.557035+07:00",
   },
@@ -784,7 +794,7 @@ export const initialRelatedNews = [
     description:
       "Badan Meteorologi, Klimatologi dan Geofisika (BMKG) memprediksi hujan berintensitas ringan hingga sedang mengguyur Jakarta hari ini. Dikutip dari laman resmi BMKG, Kamis (29/2), pada pagi hari cuaca berawan tebal hingga hujan berintensitas sedang diprediksi menaungi wilayah Jakarta Utara, Jakarta Pusat, Jakarta Timur, Jakarta Barat, Jakarta Selatan, dan Kepulauan Seribu.",
     url_image: "/images/carousel-home/carousel-1.jpg",
-    url: "/coming-soon",
+    url: "/segera-hadir",
     created_at: "2024-03-31T06:22:25.557035+07:00",
     updated_at: "2024-03-31T06:22:25.557035+07:00",
   },

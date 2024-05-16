@@ -4,7 +4,7 @@ import { FaqSelect } from "@/modules/Faq/FaqSelect";
 import { FaqSidebar } from "@/modules/Faq/FaqSidebar";
 
 export const metadata = {
-  title: "FAQ",
+  title: "Tanya Jawab",
 };
 
 const FaqControlPage = ({ params }) => {

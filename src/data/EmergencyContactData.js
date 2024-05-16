@@ -38,7 +38,7 @@ export const faqEmergencyContact = [
     id: 1,
     question: "Kapan saya harus menggunakan nomor darurat?",
     answer:
-      "Gunakan nomor darurat jika Anda atau orang lain dalam bahaya langsung, seperti dalam keadaan medis yang mengancam jiwa, kebakaran, atau jika Anda menyaksikan tindak kriminal. Jika situasinya tidak mendesak, silakan hubungi nomor layanan non-darurat kami.",
+      "Gunakan nomor darurat jika Anda atau orang lain dalam bahaya langsung, seperti dalam keadaan medis yang mengancam jiwa, kebakaran, atau jika Anda menyaksikan tindak kriminal. Jika situasinya tidak mendesak, silahkan hubungi nomor layanan non-darurat kami.",
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ export const faqEmergencyContact = [
     question:
       "Di mana saya bisa menemukan informasi lebih lanjut tentang persiapan bencana?",
     answer:
-      "Untuk informasi lebih lanjut tentang cara mempersiapkan bencana dan keadaan darurat, silakan kunjungi",
+      "Untuk informasi lebih lanjut tentang cara mempersiapkan bencana dan keadaan darurat, silahkan kunjungi",
     link: (
       <Link
         href="https://bpbd.jakarta.go.id/"

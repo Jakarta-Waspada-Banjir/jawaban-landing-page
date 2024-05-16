@@ -73,7 +73,7 @@ const Jumbotron = ({ data }) => {
               </p>
             </div>
             {/* desktop */}
-            <ModalShareSocialMedia inMobileHidden />
+            <ModalShareSocialMedia data={data} inMobileHidden />
 
             <div className="flex gap-5 md:hidden">
               {/* view */}
@@ -109,7 +109,7 @@ const Jumbotron = ({ data }) => {
                 </div>
               </div>
             </div>
-            <ModalShareSocialMedia />
+            <ModalShareSocialMedia data={data} />
           </div>
           <div className="hidden shrink-0 flex-col items-end gap-3 md:flex">
             <div className="flex gap-5">
