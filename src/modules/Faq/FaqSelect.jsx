@@ -19,7 +19,7 @@ export const FaqSelect = () => {
   const filteredData = FaqData.find((data) => data.slug === slug)?.title ?? "-";
 
   const handleSelectItem = (slug) => {
-    router.push(`/faq/${slug}`);
+    router.push(`/tanya-jawab/${slug}`);
   };
 
   return (
