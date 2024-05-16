@@ -36,34 +36,39 @@ export const navigation = {
   practical_tips: [
     {
       id: 1,
-      name: "Cara mengamankan rumah dari banjir",
-      url: "/segera-hadir",
+      name: "Cara Mengatasi Banjir",
+      url: "/document/cara-mengatasi-banjir.pdf",
     },
     {
       id: 2,
-      name: "Peralatan darurat yang wajib ada",
-      url: "/segera-hadir",
+      name: "Membersihkan Rumah Pasca Banjir",
+      url: "/document/membersihkan-rumah-pasca-banjir.pdf",
     },
     {
       id: 3,
-      name: "Cara aman mengungsi saat banjir",
-      url: "/segera-hadir",
+      name: "Mengapa Banjir Terjadi",
+      url: "/document/mengapa-banjir-terjadi.pdf",
+    },
+    {
+      id: 4,
+      name: "Sinegritas Elemen Masyarakat Dalam Menghadapi Banjir",
+      url: "/document/sinegritas-elemen-masyarakat.pdf",
     },
   ],
   legal_and_support: [
     {
       id: 1,
-      name: "Informasi hak cipta",
+      name: "Informasi Hak Cipta",
       url: "/segera-hadir",
     },
     {
       id: 2,
-      name: "Kebijakan privasi",
+      name: "Kebijakan Privasi",
       url: "/segera-hadir",
     },
     {
       id: 3,
-      name: "Syarat dan ketentuan",
+      name: "Syarat dan Ketentuan",
       url: "/segera-hadir",
     },
   ],
