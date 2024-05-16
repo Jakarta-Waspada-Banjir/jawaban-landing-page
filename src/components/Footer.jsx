@@ -88,6 +88,8 @@ export const Footer = () => {
                   <li key={item.name}>
                     <Link
                       href={item.url}
+                      target="_blank"
+                      download
                       className="text-sm leading-6 text-white hover:text-white"
                     >
                       {item.name}
