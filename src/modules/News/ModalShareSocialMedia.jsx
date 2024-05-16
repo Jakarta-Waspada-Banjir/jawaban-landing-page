@@ -19,11 +19,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
+  Button,
 } from "@/components/ui";
 import { Separator } from "@/components/ui/separator";
 import { BASE_URL } from "@/config";
+import { cn } from "@/lib/utils";
 
-export const ModalShareSocialMedia = () => {
+export const ModalShareSocialMedia = ({ inMobileHidden = false }) => {
   const [isClicked, setIsClicked] = useState(false);
   const pathName = usePathname();
   const url = BASE_URL + pathName;
@@ -88,9 +90,16 @@ export const ModalShareSocialMedia = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <button>
-          <ShareIcon className="h-6 w-6 cursor-pointer text-primary" />
-        </button>
+        <Button
+          size="sm"
+          variant="outline"
+          className={cn(
+            `flex w-full gap-4 bg-transparent p-4 text-xs text-white hover:border-primary hover:bg-primary hover:text-white md:hidden xl:p-5 xl:text-base`,
+            { "hidden w-min md:flex": inMobileHidden },
+          )}
+        >
+          Bagikan Berita <ShareIcon className="h-4 w-4 xl:h-5 xl:w-5" />
+        </Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="max-w-sm">
         <AlertDialogHeader className="overflow-hidden">

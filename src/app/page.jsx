@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="pt-24 lg:pt-32">
+      <div className="pt-20 lg:pt-28">
         <BannerCarousel />
         <EarlyWarning />
         <WaterLevel />

@@ -7,6 +7,10 @@ import { formatDate } from "@/utils";
 import RelatedNewsCard from "./RelatedNewsCard";
 
 const LatestAndPopularNews = () => {
+  const sortedData = NewsData.sort(
+    (a, b) => new Date(b.release_date) - new Date(a.release_date),
+  );
+
   return (
     <section className="mx-auto mt-4 flex max-w-7xl gap-7 px-4 py-4 sm:px-6 lg:px-8 lg:py-6 xl:gap-10">
       <div className="w-full">
@@ -14,23 +18,23 @@ const LatestAndPopularNews = () => {
           Berita Terbaru
         </h2>
         <div className="mt-3 flex flex-col gap-5 lg:mt-5 lg:gap-7 xl:gap-8">
-          {NewsData.map((data) => (
+          {sortedData.slice(0, 5).map((data) => (
             <Link
               href={`/berita/${data.slug}`}
               key={data.id}
               className="flex cursor-pointer gap-3 rounded-xl border border-gray-200 transition duration-300 hover:shadow-lg xl:gap-5"
             >
-              <div className="flex h-28 p-3 lg:h-40 xl:h-48 xl:p-4">
+              <div className="flex h-28 p-3 lg:h-40 xl:h-40 xl:p-4">
                 <div className="flex h-full flex-col justify-between">
                   <div className="flex flex-col gap-1">
-                    <h5 className="text-xs font-medium uppercase text-gray-500 xl:text-sm">
+                    <h5 className="text-xs font-medium uppercase text-gray-500">
                       {data.tag}
                     </h5>
-                    <h3 className="line-clamp-2 text-sm font-medium text-gray-700 lg:text-base xl:text-xl">
+                    <h3 className="line-clamp-1 text-sm font-medium text-gray-700 lg:text-base">
                       {data.title}
                     </h3>
                   </div>
-                  <p className="hidden text-gray-500 lg:line-clamp-2 lg:text-sm xl:text-base">
+                  <p className="hidden text-gray-500 lg:line-clamp-2 lg:text-sm xl:text-sm">
                     {data.content[0].text}
                   </p>
                   <div className="flex gap-5 text-xs text-gray-500 xl:text-sm">
@@ -39,7 +43,7 @@ const LatestAndPopularNews = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative h-28 w-28 shrink-0 lg:h-40 lg:w-40 xl:h-48 xl:w-48">
+              <div className="relative h-28 w-28 shrink-0 lg:h-40 lg:w-40 xl:h-40 xl:w-40">
                 <Image
                   src={data.image}
                   className="group-hover: rounded-e-xl object-cover"

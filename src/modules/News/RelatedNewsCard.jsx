@@ -56,7 +56,7 @@ const RelatedNewsCard = ({
         </h3>
 
         {isPopularVariant ? (
-          <div className="flex items-center gap-x-1 text-xs text-gray-500 lg:text-sm">
+          <div className="flex items-center gap-x-1 text-xs text-gray-500 lg:text-[13px]">
             <EyeIcon className="h-4 w-4" />
             <span className="leading-none">Dilihat: {viewed} kali</span>
           </div>

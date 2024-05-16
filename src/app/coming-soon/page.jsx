@@ -12,7 +12,7 @@ const ComingSoon = () => {
   return (
     <>
       <Header />
-      <div className="pt-24 lg:pt-32">
+      <div className="pt-20 lg:pt-28">
         <div className="relative mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
           <div className="absolute -top-8 left-0 h-28 w-28 rounded-full bg-gradient-to-r from-primary to-secondary blur-3xl filter sm:top-0 md:h-36 md:w-36" />
           <div className="absolute bottom-0 right-0 h-28 w-28 rounded-full bg-gradient-to-r from-primary to-secondary blur-3xl filter md:h-36 md:w-36" />

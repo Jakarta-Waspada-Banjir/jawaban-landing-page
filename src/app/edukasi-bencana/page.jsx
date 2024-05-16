@@ -66,7 +66,7 @@ export default function DisasterEducation() {
   return (
     <>
       <Header />
-      <div className="pt-24 lg:pt-32">
+      <div className="pt-20 lg:pt-28">
         <Banner>
           <h1 className="text-center text-xl font-semibold text-white sm:text-2xl">
             Edukasi Bencana

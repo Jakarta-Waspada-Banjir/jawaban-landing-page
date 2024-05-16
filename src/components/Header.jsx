@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { DestkopMenu } from "./DestkopMenu";
 import { MobileMenu } from "./MobileMenu";
 
-import logoSvg from "/public/logo/jawaban.svg";
+import logo from "/public/logo/jawaban-logo.png";
 
 export const Header = ({ inMobileHidden = false, isTransparent = false }) => {
   return (
@@ -31,15 +31,15 @@ export const Header = ({ inMobileHidden = false, isTransparent = false }) => {
                 <MobileMenu />
                 <div className="flex flex-shrink-0 items-center justify-between">
                   <Link href="/" className="inline-flex items-center">
-                    <div className="relative h-12 w-12 lg:h-20 lg:w-20">
-                      <Image
-                        fill
-                        src={logoSvg}
-                        priority
-                        alt="Jawaban-logo"
-                        sizes="200vw"
-                      />
-                    </div>
+                    <Image
+                      className="w-40"
+                      src={logo}
+                      width={0}
+                      height={0}
+                      priority
+                      alt="Jawaban-logo"
+                      sizes="200vw"
+                    />
                   </Link>
                 </div>
               </div>
