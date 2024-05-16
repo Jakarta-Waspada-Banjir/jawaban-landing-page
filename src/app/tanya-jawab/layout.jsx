@@ -1,5 +1,3 @@
-import dynamic from "next/dynamic";
-
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import {
@@ -11,15 +9,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui";
 
-export const metadata = {
-  title: "Peta Informasi Banjir",
-};
-
-const DynamicMap = dynamic(() => import("@/modules/FloodInformationMap/Map"), {
-  ssr: false,
-});
-
-const FloodInformationMap = () => {
+export default function FaqLayout({ children }) {
   return (
     <>
       <Header />
@@ -32,7 +22,7 @@ const FloodInformationMap = () => {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbPage className="font-medium text-primary">
-                Peta Informasi Banjir
+                Tanya Jawab
               </BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
@@ -40,22 +30,15 @@ const FloodInformationMap = () => {
 
         <div className="my-8">
           <h1 className="mb-2 text-2xl font-semibold text-gray-700 md:text-3xl">
-            Peta Informasi Banjir
+            Tanya Jawab
           </h1>
           <p className="text-sm font-medium text-gray-500 sm:text-base">
-            menyediakan visualisasi komprehensif dan terperinci tentang
-            area-area yang berisiko banjir. Dengan mengintegrasikan data
-            hidrologi, topografi, dan informasi infrastruktur,
+            Pertanyaan yang sering diajukan seputar informasi banjir di Jakarta
           </p>
         </div>
-
-        <div className="mt-6">
-          <DynamicMap />
-        </div>
+        {children}
       </div>
       <Footer />
     </>
   );
-};
-
-export default FloodInformationMap;
+}

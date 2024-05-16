@@ -7,7 +7,7 @@ import {
 import { FloodControlData } from "@/data/FloodControlData";
 
 export const metadata = {
-  title: "Info Banjir",
+  title: "Informasi Banjir",
 };
 
 const FloodControlPage = ({ params }) => {

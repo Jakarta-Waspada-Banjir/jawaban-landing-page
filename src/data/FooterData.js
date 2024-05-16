@@ -9,62 +9,62 @@ export const navigation = {
   quick_access: [
     {
       id: 1,
-      name: "Kontak Darurat",
-      url: "/kontak-darurat",
+      name: "Informasi Banjir",
+      url: "/informasi-banjir",
     },
     {
       id: 2,
-      name: "Info Banjir",
-      url: "/info-banjir",
-    },
-    {
-      id: 3,
       name: "Peta Informasi Banjir",
       url: "/peta-informasi-banjir",
     },
     {
+      id: 3,
+      name: "Berita",
+      url: "/berita",
+    },
+    {
       id: 4,
       name: "Tanya Jawab",
-      url: "/faq",
+      url: "/tanya-jawab",
     },
     {
       id: 5,
-      name: "Berita",
-      url: "/berita",
+      name: "Kontak Darurat",
+      url: "/kontak-darurat",
     },
   ],
   practical_tips: [
     {
       id: 1,
       name: "Cara mengamankan rumah dari banjir",
-      url: "/coming-soon",
+      url: "/segera-hadir",
     },
     {
       id: 2,
       name: "Peralatan darurat yang wajib ada",
-      url: "/coming-soon",
+      url: "/segera-hadir",
     },
     {
       id: 3,
       name: "Cara aman mengungsi saat banjir",
-      url: "/coming-soon",
+      url: "/segera-hadir",
     },
   ],
   legal_and_support: [
     {
       id: 1,
       name: "Informasi hak cipta",
-      url: "/coming-soon",
+      url: "/segera-hadir",
     },
     {
       id: 2,
       name: "Kebijakan privasi",
-      url: "/coming-soon",
+      url: "/segera-hadir",
     },
     {
       id: 3,
       name: "Syarat dan ketentuan",
-      url: "/coming-soon",
+      url: "/segera-hadir",
     },
   ],
   social_media: [

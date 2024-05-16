@@ -37,11 +37,11 @@ export const InformationContact = () => {
             <div className="flex items-center gap-3">
               <MailIcon className="h-5 w-5 text-white" />
               <a
-                href="mailto:jawaban@jakarta.go.id"
+                href="mailto:jawabanproject@gmail.com"
                 target="_blank"
                 className="text-sm leading-6 text-white hover:text-white"
               >
-                jawaban@jakarta.go.id
+                jawabanproject@gmail.com
               </a>
             </div>
 
@@ -64,6 +64,7 @@ export const InformationContact = () => {
             <Link
               key={item.id}
               href={item.url}
+              target="_blank"
               className="rounded-full p-1 hover:bg-white/40"
             >
               {item.icon}

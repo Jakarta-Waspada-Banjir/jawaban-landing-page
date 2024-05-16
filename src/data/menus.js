@@ -7,19 +7,13 @@ export const menus = [
   },
   {
     id: 2,
-    name: "Data",
-    url: "/coming-soon",
-    items: [],
-  },
-  {
-    id: 3,
     name: "Informasi",
     url: "",
     items: [
       {
         id: 1,
-        name: "Info Banjir",
-        url: "/info-banjir#header",
+        name: "Informasi Banjir",
+        url: "/informasi-banjir#header",
       },
       {
         id: 2,
@@ -29,32 +23,22 @@ export const menus = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: "Peta",
     url: "/peta-informasi-banjir",
     items: [],
   },
   {
+    id: 4,
+    name: "Berita",
+    url: "/berita",
+    items: [],
+  },
+  {
     id: 5,
-    name: "Media",
-    url: "",
-    items: [
-      {
-        id: 1,
-        name: "lorem ipsum",
-        url: "/coming-soon",
-      },
-      {
-        id: 2,
-        name: "lorem ipsum",
-        url: "/coming-soon",
-      },
-      {
-        id: 3,
-        name: "lorem ipsum",
-        url: "/coming-soon",
-      },
-    ],
+    name: "Tanya Jawab",
+    url: "/tanya-jawab",
+    items: [],
   },
   {
     id: 6,
@@ -64,7 +48,7 @@ export const menus = [
       {
         id: 1,
         name: "Kontak Kami",
-        url: "/coming-soon",
+        url: "/#kontak-kami",
       },
       {
         id: 2,

@@ -11,7 +11,8 @@ export const FaqSidebar = () => {
   const { slug } = useParams();
   const pathName = usePathname();
 
-  const isCurrentPathName = pathName === "/faq" || pathName === "/faq/banjir";
+  const isCurrentPathName =
+    pathName === "/tanya-jawab" || pathName === "/tanya-jawab/banjir";
   return (
     <div className="flex w-72 flex-auto flex-shrink-0 flex-col gap-2">
       {FaqData.map((data, index) => {
@@ -33,7 +34,7 @@ export const FaqSidebar = () => {
               },
             )}
           >
-            <Link href={`/faq/${data.slug}`}>{data.title ?? "-"}</Link>
+            <Link href={`/tanya-jawab/${data.slug}`}>{data.title ?? "-"}</Link>
           </Button>
         );
       })}

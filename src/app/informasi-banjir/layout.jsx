@@ -25,7 +25,7 @@ export default function FloodControlLayout({ children }) {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbPage className="font-medium text-primary">
-                Info Banjir
+                Informasi Banjir
               </BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>

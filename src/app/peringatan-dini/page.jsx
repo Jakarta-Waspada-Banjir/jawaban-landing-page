@@ -10,9 +10,7 @@ const EarlyWarning = () => {
   return (
     <>
       <Header />
-      <div className="pt-20 lg:pt-28">
-        <EarlyWarningTab />
-      </div>
+      <EarlyWarningTab />
       <Footer />
     </>
   );

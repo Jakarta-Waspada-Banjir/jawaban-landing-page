@@ -13,7 +13,7 @@ import { InformationContact } from "./InformationContact";
 export const ContactUs = () => {
   const { toast } = useToast();
 
-  const [state, handleSubmit] = useForm("mrgndbry");
+  const [state, handleSubmit] = useForm("xjvnzlro");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,7 +63,10 @@ export const ContactUs = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
-      <h1 className="mb-6 text-2xl font-semibold text-gray-700 md:text-3xl">
+      <h1
+        className="mb-6 text-2xl font-semibold text-gray-700 md:text-3xl"
+        id="kontak-kami"
+      >
         Kontak Kami
       </h1>
       <div className="flex flex-col gap-5">

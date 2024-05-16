@@ -18,6 +18,7 @@ export * from "./LinkIcon";
 export * from "./MagnifyingGlassIcon";
 export * from "./MailIcon";
 export * from "./MapPinIcon";
+export * from "./NewspaperIcon";
 export * from "./ObservationPostIcon";
 export * from "./OceanWavesIcon";
 export * from "./PersonIcon";
