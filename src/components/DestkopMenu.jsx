@@ -10,17 +10,26 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui";
 import { menus } from "@/data/menus";
+import { cn } from "@/lib/utils";
 
-export function DestkopMenu() {
+export function DestkopMenu({ isTransparent }) {
   return (
     <div className="hidden lg:block">
       <div className="flex items-center space-x-5 font-medium text-black">
         {menus.map((menu) =>
           menu.items.length > 0 ? (
             <DropdownMenu key={menu.id}>
-              <DropdownMenuTrigger className="flex items-center focus:outline-none">
+              <DropdownMenuTrigger
+                className={cn("flex items-center focus:outline-none", {
+                  "text-white/90": isTransparent,
+                })}
+              >
                 {menu.name}{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-black" />
+                <ChevronDownIcon
+                  className={cn("ml-2 h-4 w-4 text-black", {
+                    "text-white/90": isTransparent,
+                  })}
+                />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {menu.items.map((item) => (
@@ -36,7 +45,9 @@ export function DestkopMenu() {
             <Link
               key={menu.id}
               href={`${menu.url}`}
-              className="flex items-center space-x-4"
+              className={cn("flex items-center space-x-4", {
+                "text-white/90": isTransparent,
+              })}
             >
               <span>{menu.name}</span>
             </Link>

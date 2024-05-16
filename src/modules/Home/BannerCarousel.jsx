@@ -15,7 +15,7 @@ import {
 import { initialNewsCarousel } from "@/data/HomeData";
 import { formatDate } from "@/utils";
 
-export const NewsCarousel = () => {
+export const BannerCarousel = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
       <Carousel

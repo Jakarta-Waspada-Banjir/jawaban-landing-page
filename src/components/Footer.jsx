@@ -68,24 +68,7 @@ export const Footer = () => {
                   Tautan Cepat
                 </h3>
                 <ul role="list" className="mt-3 space-y-2 sm:mt-5">
-                  {navigation.quick_links.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.url}
-                        className="text-sm leading-6 text-white hover:text-white"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-base font-bold leading-6 text-white">
-                  Sumber Daya
-                </h3>
-                <ul role="list" className="mt-3 space-y-2 sm:mt-5">
-                  {navigation.resources.map((item) => (
+                  {navigation.quick_access.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.url}

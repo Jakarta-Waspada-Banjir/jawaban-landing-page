@@ -6,33 +6,31 @@ import {
 } from "@/components/icons";
 
 export const navigation = {
-  quick_links: [
+  quick_access: [
     {
       id: 1,
-      name: "Peta bahaya banjir Jakarta",
-      url: "/coming-soon",
+      name: "Kontak Darurat",
+      url: "/kontak-darurat",
     },
     {
       id: 2,
-      name: "Update terbaru banjir Jakarta",
-      url: "/coming-soon",
+      name: "Info Banjir",
+      url: "/info-banjir",
     },
     {
       id: 3,
-      name: "Status terkini banjir Jakarta",
-      url: "/coming-soon",
-    },
-  ],
-  resources: [
-    {
-      id: 1,
-      name: "Panduan kesiapsiagaan banjir",
-      url: "/coming-soon",
+      name: "Peta Informasi Banjir",
+      url: "/peta-informasi-banjir",
     },
     {
-      id: 2,
-      name: "FAQ",
+      id: 4,
+      name: "Tanya Jawab",
       url: "/faq",
+    },
+    {
+      id: 5,
+      name: "Berita",
+      url: "/berita",
     },
   ],
   practical_tips: [
@@ -68,35 +66,30 @@ export const navigation = {
       name: "Syarat dan ketentuan",
       url: "/coming-soon",
     },
-    {
-      id: 4,
-      name: "Cara berdonasi untuk korban banjir",
-      url: "/coming-soon",
-    },
   ],
   social_media: [
     {
       id: 1,
       name: "Facebook",
-      url: "/coming-soon",
+      url: "https://www.facebook.com/profile.php?id=61559544519623&mibextid=ZbWKwL",
       icon: <FacebookIcon className="h-6 w-6 text-white" />,
     },
     {
       id: 2,
       name: "Instagram",
-      url: "/coming-soon",
+      url: "https://www.instagram.com/jawaban.project",
       icon: <InstagramIcon className="h-6 w-6 text-white" />,
     },
     {
       id: 3,
       name: "X",
-      url: "/coming-soon",
+      url: "https://twitter.com/JawabanProject",
       icon: <XIcon className="h-5 w-5 text-white" />,
     },
     {
       id: 4,
       name: "Tiktok",
-      url: "/coming-soon",
+      url: "https://www.tiktok.com/@jawaban.project",
       icon: <TiktokIcon className="h-6 w-6 text-white" />,
     },
   ],
