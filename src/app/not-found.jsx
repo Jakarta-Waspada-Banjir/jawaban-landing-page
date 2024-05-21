@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <div className="pb-20 pt-24 lg:pt-9 lg:pb-5">
+      <div className="pb-20 pt-24 lg:pt-12 lg:pb-2">
         <div className="mx-auto grid max-w-7xl gap-0 px-4 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-6">
           <div className="flex flex-col justify-center">
             <h1 className="mb-5 text-center text-2xl font-bold text-black md:text-[40px] md:leading-tight lg:text-left">
