@@ -22,7 +22,7 @@ const LatestAndPopularNews = () => {
             <Link
               href={`/berita/${data.slug}`}
               key={data.id}
-              className="flex cursor-pointer gap-3 rounded-xl border border-gray-200 transition duration-300 hover:shadow-lg xl:gap-5"
+              className="flex cursor-pointer justify-between gap-3 rounded-xl border border-gray-200 transition duration-300 hover:shadow-lg xl:gap-5"
             >
               <div className="flex h-28 p-3 lg:h-40 xl:h-40 xl:p-4">
                 <div className="flex h-full flex-col justify-between">
