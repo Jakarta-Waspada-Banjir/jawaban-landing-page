@@ -619,4 +619,119 @@ export const NewsData = [
       },
     ],
   },
+  {
+    id: 11,
+    tag: "Sosialisasi Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Sosialisasi dan Simulasi Penanganan Bencana Gempa Bumi dan Banjir di MAN 7 Jakarta",
+    slug: "sosialisasi-dan-simulasi-penanganan-bencana-gempa-bumi-dan-banjir-di-man-7-jakarta",
+    author: "UPT PDIK",
+    editor: "UPT PDIK",
+    viewed: 0,
+    shared: 0,
+    release_date: "2023-03-08T17:00:00.000Z",
+    image:
+      "/images/news/sosialisasi-dan-simulasi-penanganan-bencana-gempa-bumi-dan-banjir-di-man-7-jakarta.jpg",
+    image_caption:
+      "Sosialisasi dan Simulasi Penanganan Bencana Gempa Bumi dan Banjir di MAN 7 Jakarta",
+    content: [
+      {
+        type: "first paragraph",
+        source: "UPT PDIK, Jakarta",
+        text: "Rabu (08/03) BPBD DKI Jakarta melaksanakan sosialisasi dan simulasi penanganan bencana gempa bumi dan banjir di MAN 7 Jakarta, Kel. Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan.",
+      },
+      {
+        type: "paragraph",
+        text: "Kegiatan ini dihadiri oleh Subkoordinator Urusan Kesiapsiagaan, Bidang Pencegahan & Kesiapsiagaan BPBD DKI Jakarta, Kepala Sekolah dan guru MAN 7 Jakarta serta Petugas Penanganan Bencana/TRC Wilayah Jakarta Selatan. Peserta kegiatan ini terdiri dari guru dan murid MAN 7 Jakarta.",
+      },
+      {
+        type: "paragraph",
+        text: "Materi yang diberikan berupa manajemen bencana, pengenalan peralatan water rescue, sosialisasi dan simulasi teknik evakuasi mandiri jika terjadi gempa bumi, serta sosialisasi layanan darurat Jakarta Siaga 112.",
+      },
+      {
+        type: "paragraph",
+        text: "Diimbau kepada masyarakat apabila menemukan atau mengalami keadaan darurat dapat menghubungi Call Center Jakarta Siaga 112.",
+      },
+    ],
+  },
+  {
+    id: 12,
+    tag: "Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Pagi Ini, Lima RT di Jakarta Terendam Banjir akibat Hujan dan Luapan Kali",
+    slug: "pagi-ini-lima-rt-di-jakarta-terendam-banjir-akibat-hujan-dan-luapan-kali",
+    author: "UPT PDIK",
+    editor: "UPT PDIK",
+    viewed: 0,
+    shared: 0,
+    release_date: "2024-04-25T17:00:00.000Z",
+    image:
+      "/images/news/pagi-ini-lima-rt-di-jakarta-terendam-banjir-akibat-hujan-dan-luapan-kali.jpg",
+    image_caption:
+      "Hujan deras yang mengguyur wilayah DKI Jakarta dan sekitarnya mengakibatkan terjadinya banjir pada Kamis (25/4/2024) pagi.",
+    content: [
+      {
+        type: "first paragraph",
+        source: "KOMPAS.COM, Jakarta",
+        text: "Hujan deras yang mengguyur wilayah DKI Jakarta dan sekitarnya mengakibatkan terjadinya banjir pada Kamis (25/4/2024) pagi.",
+      },
+      {
+        type: "paragraph",
+        text: "Badan Penanggulangan Bencana Daerah (BPBD) DKI Jakarta melaporkan, terdapat lima wilayah RT yang terendam banjir dengan ketinggian 40 sentimeter (cm).",
+      },
+      {
+        type: "paragraph",
+        text: "“BPBD mencatat genangan yang saat ini terjadi masih di 5 RT di Jakarta Selatan,” ujar Kepala Pelaksana BPBD DKI Jakarta Isnawa Adji saat dikonfirmasi, Kamis (25/4/2024).",
+      },
+      {
+        type: "paragraph",
+        text: "Selain akibat hujan, kata Isnawa, banjir juga disebabkan oleh meluapnya aliran kali yang melintasi permukiman warga.",
+      },
+      {
+        type: "paragraph",
+        text: "Adapun saat ini BPBD bersama Dinas Sumber Daya Air (SDA) DKI Jakarta sudah mengerahkan petugas untuk menangani banjir tersebut.",
+      },
+      {
+        type: "paragraph",
+        text: '"Sedang dilakukan penyedotan genangan dan memastikan tali-tali air berfungsi dengan baik," pungkasnya Isnawa.',
+      },
+    ],
+  },
+  {
+    id: 13,
+    tag: "Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Heru Budi Sebut Jakarta Kewalahan Jika Hujan 4 Jam Berintensitas 180 mm per Hari, Begini Penjelasannya",
+    slug: "heru-budi-sebut-jakarta-kewalahan-jika-hujan-4-jam-berintensitas-180-mm-per-hari-begini-penjelasannya",
+    author: "Tempo.co",
+    editor: "Sapto Yunus",
+    viewed: 0,
+    shared: 0,
+    release_date: "2024-03-25T17:00:00.000Z",
+    image:
+      "/images/news/heru-budi-sebut-jakarta-kewalahan-jika-hujan-4-jam-berintensitas-180-mm-per-hari-begini-penjelasannya.jpg",
+    image_caption:
+      "Sejumlah pengendara menerobos banjir yang merendam kawasan Daan Mogot, Jakarta, Jumat 22 Maret 2024. Intensitas hujan yang tinggi membuat banjir setinggi 10-30 cm yang merendam di kawasan tersebut. TEMPO/Fajar Januarta",
+    content: [
+      {
+        type: "first paragraph",
+        source: "TEMPO.CO, Jakarta",
+        text: "Penjabat Gubernur DKI Jakarta Heru Budi Hartono mengatakan hujan akan menyebabkan DKI Jakarta kewalahan dan banjir jika intensitasnya 180 mm selama 4 jam saja. ",
+      },
+      {
+        type: "paragraph",
+        text: '"Jadi begini, di Jabodetabek, termasuk Jakarta,  kemarin intensitas hujan 200 mm per hari. Sebanyak 180 mm per hari saja, kita DKI ini kalau hujan empat jam sudah kewalahan," kata Heru di GOR Cengkareng, Jakarta Barat, Senin, 25 Maret 2024.',
+      },
+      {
+        type: "paragraph",
+        text: "Hujan melanda wilayah DKI Jakarta dan sekitarnya pada Ahad, 24 Maret hingga Senin, 25 Maret 2024. Badan Penanggulangan Bencana Daerah (BPBD) DKI Jakarta menyatakan banjir di antaranya melanda Jalan Raya Bogor KM 19 (Hek), Kramat Jati, Jakarta Timur dengan ketinggian air 30 sentimeter hingga Senin pukul 07.00 WIB.",
+      },
+    ],
+  },
 ];
