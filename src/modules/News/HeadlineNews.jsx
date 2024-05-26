@@ -38,9 +38,10 @@ const HeadlineNews = () => {
         {filteredData.map(
           ({ id, image, tag, title, release_date, author, slug }) => (
             <NewsCarousel
-              slug={slug}
+              id={id}
               key={id}
               tag={tag}
+              slug={slug}
               title={title}
               image={image}
               author={author}

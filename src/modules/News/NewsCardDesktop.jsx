@@ -4,8 +4,10 @@ import { NewsData } from "@/data/NewsData";
 
 import RelatedNewsCard from "./RelatedNewsCard";
 
-const NewsCardDesktop = ({ tag }) => {
-  const filteredNews = NewsData.filter((data) => data.tag === tag);
+const NewsCardDesktop = ({ tag, id }) => {
+  const filteredNews = NewsData.filter((data) => data.tag === tag).filter(
+    (data) => data.id !== id,
+  );
 
   return (
     <div className="hidden h-min w-[300px] flex-shrink-0 flex-col gap-1 rounded-xl bg-gray-400 bg-opacity-10 bg-clip-padding p-4 backdrop-blur-md backdrop-filter md:flex lg:w-[350px] xl:w-[400px]">

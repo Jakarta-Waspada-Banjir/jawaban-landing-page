@@ -7,7 +7,15 @@ import { formatDate } from "@/utils";
 import NewsCardDesktop from "./NewsCardDesktop";
 import NewsCardMobile from "./NewsCardMobile";
 
-const NewsCarousel = ({ image, tag, title, release_date, author, slug }) => {
+const NewsCarousel = ({
+  image,
+  tag,
+  title,
+  release_date,
+  author,
+  slug,
+  id,
+}) => {
   return (
     <div
       style={{ backgroundImage: `url('${image}')` }}
@@ -47,9 +55,9 @@ const NewsCarousel = ({ image, tag, title, release_date, author, slug }) => {
             </div>
           </div>
 
-          <NewsCardDesktop tag={tag} />
+          <NewsCardDesktop tag={tag} id={id} />
 
-          <NewsCardMobile tag={tag} />
+          <NewsCardMobile tag={tag} id={id} />
         </div>
       </div>
     </div>
