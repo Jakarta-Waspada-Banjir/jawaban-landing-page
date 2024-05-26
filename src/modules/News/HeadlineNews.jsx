@@ -1,5 +1,6 @@
 "use client";
 
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import React, { useCallback } from "react";
 
@@ -17,9 +18,12 @@ import CarouselControl from "./CarouselControl";
 import { useCarouselCount } from "./CarouselCount";
 import NewsCarousel from "./NewsCarousel";
 
-const HeadlineNews = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+const options = { loop: true };
 
+const HeadlineNews = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ playOnInit: true, delay: 3000 }),
+  ]);
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
