@@ -4,11 +4,14 @@ import { NewsData } from "@/data/NewsData";
 import ContentItem from "@/modules/DetailNews/ContentItem";
 import Jumbotron from "@/modules/DetailNews/Jumbotron";
 import RelatedNewsCard from "@/modules/News/RelatedNewsCard";
+import { shuffle } from "@/utils";
 
 const NewsDetail = ({ params }) => {
   const { slug } = params;
 
   const selectedData = NewsData.find((data) => data.slug === slug);
+  const filteredNews = NewsData.filter((data) => data.id !== selectedData.id);
+  const shuffledNews = shuffle(filteredNews);
 
   return (
     <>
@@ -35,8 +38,9 @@ const NewsDetail = ({ params }) => {
             Berita lainnya
           </h2>
           <div className="rounded-xl border p-3 shadow-xl">
-            {NewsData.slice(0, 5).map(
-              ({ image, tag, title, release_date, id, slug }) => (
+            {shuffledNews
+              .slice(0, 5)
+              .map(({ image, tag, title, release_date, id, slug }) => (
                 <RelatedNewsCard
                   slug={slug}
                   isOtherVariant
@@ -46,8 +50,7 @@ const NewsDetail = ({ params }) => {
                   tag={tag}
                   title={title}
                 />
-              ),
-            )}
+              ))}
           </div>
         </section>
       </div>

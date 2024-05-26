@@ -10,7 +10,7 @@ export const NewsData = [
     editor: "Toni Riyanto",
     viewed: 100,
     shared: 10,
-    release_date: "2024-05-14T17:00:00.000Z",
+    release_date: "2024-05-14T00:00:00.000Z",
     image: "/images/news/pembuatan-saluran-air-di-gang-saalih-rampung.jpeg",
     content: [
       {
@@ -59,9 +59,9 @@ export const NewsData = [
     slug: "pj-gubernur-heru-pastikan-peralatan-di-rumah-pompa-ancol-berjalan-optimal",
     author: "Folmer",
     editor: "Erikyanri Maulana",
-    viewed: 100,
+    viewed: 89,
     shared: 10,
-    release_date: "2024-02-23T17:00:00.000Z",
+    release_date: "2024-02-23T00:00:00.000Z",
     image:
       "/images/news/pj-gubernur-heru-pastikan-peralatan-di-rumah-pompa-ancol-berjalan-optimal.jpeg",
     image_caption:
@@ -111,9 +111,9 @@ export const NewsData = [
     slug: "pasukan-oranye-tangani-genangan-di-jalan-yos-sudarso",
     author: "Anita Karyati",
     editor: "Toni Riyanto",
-    viewed: 0,
+    viewed: 15,
     shared: 0,
-    release_date: "2024-02-29T11:35:12.000Z",
+    release_date: "2024-02-29T00:00:00.000Z",
     image:
       "/images/news/pasukan-oranye-tangani-genangan-di-jalan-yos-sudarso.jpeg",
     image_caption:
@@ -166,7 +166,7 @@ export const NewsData = [
     editor: "Jessi Carina",
     viewed: 0,
     shared: 0,
-    release_date: "2024-03-15T11:35:12.000Z",
+    release_date: "2024-03-15T00:00:00.000Z",
     image:
       "/images/news/diguyur-hujan-deras-16-rt-di-jakarta-terendam-banjir-hingga-140-cm.jpg",
     image_caption:
@@ -226,7 +226,7 @@ export const NewsData = [
     editor: "Detik Finance",
     viewed: 0,
     shared: 0,
-    release_date: "2024-05-03T11:35:12.000Z",
+    release_date: "2024-05-03T00:00:00.000Z",
     image: "/images/news/ahok-pede-jakarta-bebas-banjir-pakai-cara-ini.jpeg",
     image_caption: "Ahok - Foto: Grandyos Zafna",
     content: [
@@ -308,7 +308,7 @@ export const NewsData = [
     editor: "Detik News",
     viewed: 0,
     shared: 0,
-    release_date: "2024-04-05T17:00:00.000Z",
+    release_date: "2024-04-05T00:00:00.000Z",
     image:
       "/images/news/wali-kota-jaksel-ungkap-biang-kerok-banjir-di-tanjung-barat.jpeg",
     image_caption:
@@ -393,7 +393,7 @@ export const NewsData = [
     editor: "Detik News",
     viewed: 0,
     shared: 0,
-    release_date: "2024-03-31T17:00:00.000Z",
+    release_date: "2024-03-31T00:00:00.000Z",
     image:
       "/images/news/curhat-warga-tanjung-barat-sebab-banjir-kian-parah-gegara-proyek-polder.jpeg",
     image_caption: "Polder Tanjung Barat (Andhika Prasetia/detikcom)",
@@ -439,9 +439,9 @@ export const NewsData = [
     slug: "heru-budi-Penanggulangan-banjir-mulai-dari-laut-artinya-dari-utara-jakarta",
     author: "Tiara Aliya Azzahra",
     editor: "Detik News",
-    viewed: 0,
+    viewed: 185,
     shared: 0,
-    release_date: "2024-03-25T17:00:00.000Z",
+    release_date: "2024-03-25T00:00:00.000Z",
     image:
       "/images/news/heru-budi-Penanggulangan-banjir-mulai-dari-laut-artinya-dari-utara-jakarta.jpeg",
     image_caption: "Heru Budi Hartono (Foto: Istimewa)",
@@ -507,9 +507,9 @@ export const NewsData = [
     slug: "sudin-sda-jaktim-ungkap-penyebab-banjir-pertigaan-hek-kramat-jati",
     author: "Devi Puspitasari",
     editor: "Detik News",
-    viewed: 0,
+    viewed: 45,
     shared: 0,
-    release_date: "2024-03-25T17:00:00.000Z",
+    release_date: "2024-03-25T00:00:00.000Z",
     image:
       "/images/news/sudin-sda-jaktim-ungkap-penyebab-banjir-pertigaan-hek-kramat-jati.jpeg",
     image_caption:
@@ -574,7 +574,7 @@ export const NewsData = [
     editor: "Detik News",
     viewed: 0,
     shared: 0,
-    release_date: "2024-03-25T17:00:00.000Z",
+    release_date: "2024-03-25T00:00:00.000Z",
     image:
       "/images/news/komeng-pilih-bertahan-di-rumahnya-yang-kebanjiran-di-tegal-alur-jakbar.jpeg",
     image_caption:
@@ -616,6 +616,218 @@ export const NewsData = [
       {
         type: "paragraph",
         text: '"BPBD mencatat genangan dari Jumat (22/03) pagi hari sampai Sabtu (23/03) pukul 11.00 WIB mengalami penurunan dari 9 RT menjadi 8 RT atau 0.026% dari 30.772 RT yang ada di wilayah DKI Jakarta," kata Kepala Pelaksana BPBD DKI Jakarta Isnawa Adji dalam keterangan, Sabtu (23/3).',
+      },
+    ],
+  },
+  {
+    id: 11,
+    tag: "Sosialisasi Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Sosialisasi dan Simulasi Penanganan Bencana Gempa Bumi dan Banjir di MAN 7 Jakarta",
+    slug: "sosialisasi-dan-simulasi-penanganan-bencana-gempa-bumi-dan-banjir-di-man-7-jakarta",
+    author: "UPT PDIK",
+    editor: "UPT PDIK",
+    viewed: 0,
+    shared: 0,
+    release_date: "2023-03-08T00:00:00.000Z",
+    image:
+      "/images/news/sosialisasi-dan-simulasi-penanganan-bencana-gempa-bumi-dan-banjir-di-man-7-jakarta.jpg",
+    image_caption:
+      "Sosialisasi dan Simulasi Penanganan Bencana Gempa Bumi dan Banjir di MAN 7 Jakarta",
+    content: [
+      {
+        type: "first paragraph",
+        source: "UPT PDIK, Jakarta",
+        text: "Rabu (08/03) BPBD DKI Jakarta melaksanakan sosialisasi dan simulasi penanganan bencana gempa bumi dan banjir di MAN 7 Jakarta, Kel. Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan.",
+      },
+      {
+        type: "paragraph",
+        text: "Kegiatan ini dihadiri oleh Subkoordinator Urusan Kesiapsiagaan, Bidang Pencegahan & Kesiapsiagaan BPBD DKI Jakarta, Kepala Sekolah dan guru MAN 7 Jakarta serta Petugas Penanganan Bencana/TRC Wilayah Jakarta Selatan. Peserta kegiatan ini terdiri dari guru dan murid MAN 7 Jakarta.",
+      },
+      {
+        type: "paragraph",
+        text: "Materi yang diberikan berupa manajemen bencana, pengenalan peralatan water rescue, sosialisasi dan simulasi teknik evakuasi mandiri jika terjadi gempa bumi, serta sosialisasi layanan darurat Jakarta Siaga 112.",
+      },
+      {
+        type: "paragraph",
+        text: "Diimbau kepada masyarakat apabila menemukan atau mengalami keadaan darurat dapat menghubungi Call Center Jakarta Siaga 112.",
+      },
+    ],
+  },
+  {
+    id: 12,
+    tag: "Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Pagi Ini, Lima RT di Jakarta Terendam Banjir akibat Hujan dan Luapan Kali",
+    slug: "pagi-ini-lima-rt-di-jakarta-terendam-banjir-akibat-hujan-dan-luapan-kali",
+    author: "UPT PDIK",
+    editor: "UPT PDIK",
+    viewed: 0,
+    shared: 0,
+    release_date: "2024-04-25T00:00:00.000Z",
+    image:
+      "/images/news/pagi-ini-lima-rt-di-jakarta-terendam-banjir-akibat-hujan-dan-luapan-kali.jpg",
+    image_caption:
+      "Hujan deras yang mengguyur wilayah DKI Jakarta dan sekitarnya mengakibatkan terjadinya banjir pada Kamis (25/4/2024) pagi.",
+    content: [
+      {
+        type: "first paragraph",
+        source: "KOMPAS.COM, Jakarta",
+        text: "Hujan deras yang mengguyur wilayah DKI Jakarta dan sekitarnya mengakibatkan terjadinya banjir pada Kamis (25/4/2024) pagi.",
+      },
+      {
+        type: "paragraph",
+        text: "Badan Penanggulangan Bencana Daerah (BPBD) DKI Jakarta melaporkan, terdapat lima wilayah RT yang terendam banjir dengan ketinggian 40 sentimeter (cm).",
+      },
+      {
+        type: "paragraph",
+        text: "“BPBD mencatat genangan yang saat ini terjadi masih di 5 RT di Jakarta Selatan,” ujar Kepala Pelaksana BPBD DKI Jakarta Isnawa Adji saat dikonfirmasi, Kamis (25/4/2024).",
+      },
+      {
+        type: "paragraph",
+        text: "Selain akibat hujan, kata Isnawa, banjir juga disebabkan oleh meluapnya aliran kali yang melintasi permukiman warga.",
+      },
+      {
+        type: "paragraph",
+        text: "Adapun saat ini BPBD bersama Dinas Sumber Daya Air (SDA) DKI Jakarta sudah mengerahkan petugas untuk menangani banjir tersebut.",
+      },
+      {
+        type: "paragraph",
+        text: '"Sedang dilakukan penyedotan genangan dan memastikan tali-tali air berfungsi dengan baik," pungkasnya Isnawa.',
+      },
+    ],
+  },
+  {
+    id: 13,
+    tag: "Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Heru Budi Sebut Jakarta Kewalahan Jika Hujan 4 Jam Berintensitas 180 mm per Hari, Begini Penjelasannya",
+    slug: "heru-budi-sebut-jakarta-kewalahan-jika-hujan-4-jam-berintensitas-180-mm-per-hari-begini-penjelasannya",
+    author: "Tempo.co",
+    editor: "Sapto Yunus",
+    viewed: 0,
+    shared: 0,
+    release_date: "2024-03-25T00:00:00.000Z",
+    image:
+      "/images/news/heru-budi-sebut-jakarta-kewalahan-jika-hujan-4-jam-berintensitas-180-mm-per-hari-begini-penjelasannya.jpg",
+    image_caption:
+      "Sejumlah pengendara menerobos banjir yang merendam kawasan Daan Mogot, Jakarta, Jumat 22 Maret 2024. Intensitas hujan yang tinggi membuat banjir setinggi 10-30 cm yang merendam di kawasan tersebut. TEMPO/Fajar Januarta",
+    content: [
+      {
+        type: "first paragraph",
+        source: "TEMPO.CO, Jakarta",
+        text: "Penjabat Gubernur DKI Jakarta Heru Budi Hartono mengatakan hujan akan menyebabkan DKI Jakarta kewalahan dan banjir jika intensitasnya 180 mm selama 4 jam saja. ",
+      },
+      {
+        type: "paragraph",
+        text: '"Jadi begini, di Jabodetabek, termasuk Jakarta,  kemarin intensitas hujan 200 mm per hari. Sebanyak 180 mm per hari saja, kita DKI ini kalau hujan empat jam sudah kewalahan," kata Heru di GOR Cengkareng, Jakarta Barat, Senin, 25 Maret 2024.',
+      },
+      {
+        type: "paragraph",
+        text: "Hujan melanda wilayah DKI Jakarta dan sekitarnya pada Ahad, 24 Maret hingga Senin, 25 Maret 2024. Badan Penanggulangan Bencana Daerah (BPBD) DKI Jakarta menyatakan banjir di antaranya melanda Jalan Raya Bogor KM 19 (Hek), Kramat Jati, Jakarta Timur dengan ketinggian air 30 sentimeter hingga Senin pukul 07.00 WIB.",
+      },
+    ],
+  },
+  {
+    id: 14,
+    tag: "Sosialisasi Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title:
+      "Sosialisasi dan Peningkatan Kapasitas dalam Penanggulangan Bencana Banjir dan Rob di Polres Pelabuhan Tanjung Priok",
+    slug: "sosialisasi-dan-peningkatan-kapasitas-dalam-penanggulangan-bencana-banjir-dan-rob-di-polres-pelabuhan-tanjung-priok",
+    author: "UPT PDIK",
+    editor: "UPT PDIK",
+    viewed: 0,
+    shared: 0,
+    release_date: "2022-09-14T00:00:00.000Z",
+    image:
+      "/images/news/sosialisasi-dan-peningkatan-kapasitas-dalam-penanggulangan-bencana-banjir-dan-rob-di-polres-pelabuhan-tanjung-priok.jpg",
+    image_caption:
+      "Sosialisasi dan Peningkatan Kapasitas dalam Penanggulangan Bencana Banjir dan Rob di Polres Pelabuhan Tanjung Priok",
+    content: [
+      {
+        type: "first paragraph",
+        source: "UPT PDIK, Jakarta",
+        text: "Rabu (14/9) BPBD DKI Jakarta memberikan sosialisasi dan peningkatan kapasitas dalam penanggulangan bencana banjir dan rob di Polres Pelabuhan Tanjung Priok, Jakarta Utara.",
+      },
+      {
+        type: "paragraph",
+        text: "Kegiatan ini dihadiri oleh Subkoordinator Urusan Pemberdayaan Masyarakat & lembaga BPBD DKI Jakarta, Wakapolres Pelabuhan Tanjung Priok dan Petugas Penanganan Bencana/TRC BPBD DKI Wilayah Jakarta Utara. Peserta kegiatan ini terdiri dari anggota Polres Pelabuhan Tanjung Priok dan Polsek.",
+      },
+      {
+        type: "paragraph",
+        text: "Materi yang diberikan berupa sosialisasi penaggulangan bencana banjir dan rob serta sosialisasi layanan darurat Jakarta Siaga 112.",
+      },
+      {
+        type: "paragraph",
+        text: "Diimbau kepada masyarakat apabila menemukan atau mengalami keadaan darurat dapat menghubungi Call Center Jakarta Siaga 112.",
+      },
+    ],
+  },
+  {
+    id: 15,
+    tag: "Banjir",
+    isTrending: false,
+    isHighlight: false,
+    title: "Kondisi Terkini Banjir Jakarta, Masih Ada 63 RT Tergenang",
+    slug: "kondisi-terkini-banjir-jakarta-masih-ada-63-rt-tergenang",
+    author: "Tim VOI",
+    editor: "Ferdinan",
+    viewed: 0,
+    shared: 0,
+    release_date: "2024-05-25T00:00:00.000Z",
+    image:
+      "/images/news/kondisi-terkini-banjir-jakarta-masih-ada-63-rt-tergenang.jpg",
+    image_caption:
+      "Petugas saat akan mengevakuasi warga yang terdampak banjir di Jakarta, Sabtu (25/5/2024). ANTARA/HO-BPBD Jaksel",
+    content: [
+      {
+        type: "first paragraph",
+        source: "Tim VOI, Jakarta",
+        text: "Badan Penanggulangan Bencana Daerah (BPBD) DKI Jakarta menyebut perkembangan terkini banjir yang terjadi di Jakarta Selatan dan Timur pada pukul 14.00 WIB masih melanda 63 RT.",
+      },
+      {
+        type: "paragraph",
+        text: "Banjir disebabkan rob (pasang laut) yang membuat Kali Ciliwung tidak bisa mengalir ke laut.",
+      },
+      {
+        type: "paragraph",
+        text: '"Sudah mulai surut dari semula 67 RT kini menjadi 63 RT atau 0,206 persen dari 30.772 RT yang ada di wilayah DKI Jakarta," kata Kepala BPBD DKI Jakarta Isnawa Adji dilansir ANTARA, Sabtu, 25 Mei. ',
+      },
+      {
+        type: "paragraph",
+        text: "Wilayah yang tergenang yaitu 10 RT di Jakarta Selatan meliputi 6 RT di Kelurahan Rawajati dengan ketinggian 35-40 cm dan 4 RT di Kelurahan Pejaten Timur dengan ketinggian 120-200 cm.",
+      },
+      {
+        type: "paragraph",
+        text: "Genangan juga melanda 53 RT di Jakarta Timur meliputi 13 RT di Kelurahan Bidara Cina dengan ketinggian 150-160 cm, 27 RT di Kelurahan Kampung Melayu dengan ketinggian 30-200 cm, 1 RT di Kelurahan Balekambang dengan ketinggian 60 cm, 11 RT di Kelurahan Cawang dengan ketinggian 30 -270 cm, dan 1 RT di Kelurahan Cililitan dengan ketinggian 170 cm. Semua penyebab genangan ini yakni luapan Kali Ciliwung.",
+      },
+      {
+        type: "paragraph",
+        text: "Adapun wilayah yang sudah surut dari genangan yaitu 1 RT di Kelurahan Penjaringan, 2 RT di Kelurahan Pluit, 2 RT di Kelurahan Tanjung Barat, 1 RT di Kelurahan Pengadegan, 1 RT di Kelurahan Balekambang, 1 RT di Kelurahan Pejaten Timur dan 3 RT di Kelurahan Kebon Baru.",
+      },
+      {
+        type: "paragraph",
+        text: "BPBD DKI Jakarta mengerahkan personel untuk memonitor kondisi genangan di setiap wilayah dan mengkoordinasikan unsur Dinas SDA, Dinas Bina Marga, Dinas Gulkarmat untuk melakukan penyedotan genangan dan memastikan tali-tali air berfungsi dengan baik bersama dengan para lurah dan camat setempat. Genangan ditargetkan untuk surut dalam waktu cepat.",
+      },
+      {
+        type: "paragraph",
+        text: "BPBD DKI mengimbau masyarakat agar tetap berhati-hati dan waspada terhadap potensi genangan. Ini salah satunya mengingat hujan yang melanda wilayah DKI Jakarta dan sekitarnya pada Jumat (24/5) menyebabkan kenaikan status antara lain di Bedung Katulampa, Pos Pantau Depok, Pintu Air Manggarai, Pintu Air Karet pada hari yang sama dan Sabtu.",
+      },
+      {
+        type: "paragraph",
+        text: "Sementara itu, dalam kesempatan terpisah, Operator Pintu Air Manggarai Andi Yusuf mengatakan ketinggian air di Pintu Air Manggarai mulai naik pukul 06.00 WIB menjadi 830 cm atau siaga dua akibat kiriman air dari Bendungan Katulampa Bogor dan Depok.",
+      },
+      {
+        type: "paragraph",
+        text: '"Warga yang tinggal di bantaran Kali Ciliwung mungkin tetap meningkatkan kewaspadaan karena masih adanya potensi kenaikan apabila terjadi hujan lokal," kata dia.',
       },
     ],
   },
