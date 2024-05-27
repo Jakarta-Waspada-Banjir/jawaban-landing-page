@@ -20,6 +20,11 @@ export const menus = [
         name: "Peringatan Dini",
         url: "/peringatan-dini",
       },
+      {
+        id: 3,
+        name: "Prediksi Banjir",
+        url: "/segera-hadir",
+      },
     ],
   },
   {
