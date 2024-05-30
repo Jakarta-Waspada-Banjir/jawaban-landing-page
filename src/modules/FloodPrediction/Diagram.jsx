@@ -78,10 +78,10 @@ const Diagram = ({ date, floodPredictionData }) => {
   });
   const timePerDay = perDay.map((item) => item.date);
   const actualWaterPerDay = perDay.map(
-    (item) => item.actual_water_level_istiqlal ? item.actual_water_level_istiqlal : item.actual_water_level_manggarai
+    (item) => item.actual_water_level_istiqlal || item.actual_water_level_istiqlal == 0  ? item.actual_water_level_istiqlal : item.actual_water_level_manggarai
   );
   const predictedWaterPerDay = perDay.map(
-    (item) => item.predicted_water_level_istiqlal ? item.predicted_water_level_istiqlal : item.predicted_water_level_manggarai
+    (item) => item.predicted_water_level_istiqlal || item.predicted_water_level_istiqlal == 0 ? item.predicted_water_level_istiqlal : item.predicted_water_level_manggarai
   );
 
   const data = {

@@ -9,7 +9,7 @@ import { DatePicker } from "./DatePicker";
 import Diagram from "./Diagram";
 
 const FloodPrediction = () => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date(2024, 4, 26));
   const formattedDate = formatDate(date.toString(), "yyyy-MM-dd");
   return (
     <>
