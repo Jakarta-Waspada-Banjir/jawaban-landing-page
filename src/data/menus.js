@@ -23,7 +23,7 @@ export const menus = [
       {
         id: 3,
         name: "Prediksi Banjir",
-        url: "/segera-hadir",
+        url: "/prediksi-banjir",
       },
     ],
   },

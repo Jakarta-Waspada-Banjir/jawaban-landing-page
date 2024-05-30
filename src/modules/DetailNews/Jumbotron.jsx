@@ -14,7 +14,6 @@ import { formatDate } from "@/utils";
 import { ModalShareSocialMedia } from "../News/ModalShareSocialMedia";
 
 const Jumbotron = ({ data }) => {
-  console.log(data.image);
   return (
     <div
       className="h-[500px] w-full bg-cover bg-center"
