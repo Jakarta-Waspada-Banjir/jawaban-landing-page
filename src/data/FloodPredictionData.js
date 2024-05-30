@@ -19716,7 +19716,6 @@ export const initialFloodPredictionIstiqlal = [
     actual_water_level_istiqlal: 0,
     predicted_water_level_istiqlal: 434.71,
     actual_flood_istiqlal: 0,
-
     predicted_flood_istiqlal: 1,
     siaga_istiqlal: 1,
   },

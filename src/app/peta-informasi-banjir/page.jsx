@@ -44,7 +44,7 @@ const FloodInformationMap = () => {
           </h1>
           <p className="text-sm font-medium text-gray-500 sm:text-base">
             Menyediakan visualisasi komprehensif dan terperinci tentang
-            tempat-tempat yang bisa menginformasikan ketinggian air untuk memprediksi banjir. Dengan menginformasikan data total pintu air, rumah pompa, pos curah hujan, pos pengamatan, posko banjir, dan waduk.
+            tempat-tempat yang dapat menginformasikan ketinggian air untuk memprediksi banjir. Dengan menginformasikan data total pintu air, rumah pompa, pos curah hujan, pos pengamatan, posko banjir, dan waduk.
           </p>
         </div>
 
