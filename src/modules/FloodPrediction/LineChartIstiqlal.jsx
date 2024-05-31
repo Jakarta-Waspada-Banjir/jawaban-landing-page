@@ -58,7 +58,7 @@ const options = {
   scales: {
     y: {
       min: 0,
-      max: 1000,
+      max: 400,
       ticks: {
         callback: function (value) {
           return value + " cm";
@@ -72,16 +72,21 @@ const options = {
   },
 };
 
-const Diagram = ({ date, floodPredictionData }) => {
+const LineChartIstiqlal = ({ date, floodPredictionData }) => {
   const perDay = floodPredictionData.filter((item) => {
     return item.date.startsWith(date);
   });
   const timePerDay = perDay.map((item) => item.date);
-  const actualWaterPerDay = perDay.map(
-    (item) => item.actual_water_level_istiqlal || item.actual_water_level_istiqlal == 0  ? item.actual_water_level_istiqlal : item.actual_water_level_manggarai
+  const actualWaterPerDay = perDay.map((item) =>
+    item.actual_water_level_istiqlal || item.actual_water_level_istiqlal == 0
+      ? item.actual_water_level_istiqlal
+      : item.actual_water_level_manggarai,
   );
-  const predictedWaterPerDay = perDay.map(
-    (item) => item.predicted_water_level_istiqlal || item.predicted_water_level_istiqlal == 0 ? item.predicted_water_level_istiqlal : item.predicted_water_level_manggarai
+  const predictedWaterPerDay = perDay.map((item) =>
+    item.predicted_water_level_istiqlal ||
+    item.predicted_water_level_istiqlal == 0
+      ? item.predicted_water_level_istiqlal
+      : item.predicted_water_level_manggarai,
   );
 
   const data = {
@@ -101,14 +106,14 @@ const Diagram = ({ date, floodPredictionData }) => {
       {
         label: "Prediksi Tinggi Muka Air",
         data: predictedWaterPerDay, // LABEL SUMBU Y
-        borderColor:  "green",
+        borderColor: "green",
         backgroundColor: "rgba(53, 162, 235, 0.00)",
         tension: 0.4,
         fill: false,
       },
       {
         label: "Batas Siaga 1",
-        data: predictedWaterPerDay.map(() => "950"), // LABEL SUMBU Y
+        data: predictedWaterPerDay.map(() => "350"), // LABEL SUMBU Y
         borderColor: "red",
         backgroundColor: "rgba(53, 162, 235, 0.0)",
         tension: 0.4,
@@ -116,7 +121,7 @@ const Diagram = ({ date, floodPredictionData }) => {
       },
       {
         label: "Batas Siaga 2",
-        data: predictedWaterPerDay.map(() => "850"), // LABEL SUMBU Y
+        data: predictedWaterPerDay.map(() => "300"), // LABEL SUMBU Y
         borderColor: "orange",
         backgroundColor: "rgba(53, 162, 235, 0.0)",
         tension: 0.4,
@@ -124,7 +129,7 @@ const Diagram = ({ date, floodPredictionData }) => {
       },
       {
         label: "Batas Siaga 3",
-        data: predictedWaterPerDay.map(() => "750"), // LABEL SUMBU Y
+        data: predictedWaterPerDay.map(() => "250"), // LABEL SUMBU Y
         borderColor: "yellow",
         backgroundColor: "rgba(53, 162, 235, 0.0)",
         tension: 0.4,
@@ -135,4 +140,4 @@ const Diagram = ({ date, floodPredictionData }) => {
   return <Line options={options} data={data} />;
 };
 
-export default Diagram;
+export default LineChartIstiqlal;
