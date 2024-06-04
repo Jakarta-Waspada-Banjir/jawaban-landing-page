@@ -74,14 +74,17 @@ npm run dev
 
 Proyek ini menggunakan teknologi-teknologi berikut :
 
-[![NEXT.JS](https://img.shields.io/badge/Next.JS-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&labelColor=black&color=black)](https://nextjs.org/)
-[![Leaflet](https://img.shields.io/badge/Leaflet.JS-199900?style=for-the-badge&logo=leaflet&logoColor=white&labelColor=199900&color=199900)](https://leafletjs.com/)
-[![Python](https://img.shields.io/badge/Python-F7CC40?style=for-the-badge&logo=Python&logoColor=white&labelColor=3776AB&color=3776AB)](https://www.python.org/)
+[![NEXT.JS](https://img.shields.io/badge/Next.JS-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Leaflet](https://img.shields.io/badge/Leaflet.JS-199900?style=for-the-badge&logo=leaflet&logoColor=white&color=199900)](https://leafletjs.com/)
+[![Python](https://img.shields.io/badge/Python-F7CC40?style=for-the-badge&logo=Python&logoColor=white&color=3776AB)](https://www.python.org/)
 [![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
-[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&labelColor=00C7B7&color=00C7B7)](https://www.netlify.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=Tailwind%20CSS&logoColor=white&labelColor=06B6D4&color=06B6D4)](https://tailwindcss.com/)
-[![Shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn/ui&logoColor=white&labelColor=black&color=000000)](https://ui.shadcn.com/)
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white&labelColor=F24E1E&color=F24E1E)](https://www.figma.com/)
+[![Date fns](https://img.shields.io/badge/date_fns-770C56?style=for-the-badge&logo=date-fns&logoColor=white&color=770C56)](https://date-fns.org/)
+[![Formspree](https://img.shields.io/badge/formspree-E5122E?style=for-the-badge&logo=Formspree&logoColor=white&color=E5122E)](https://formspree.io/)
+[![Embla Carousel](https://img.shields.io/badge/embla_carousel-A8ADEC?style=for-the-badge&logoColor=white&color=A8ADEC)](https://www.embla-carousel.com/)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&color=00C7B7)](https://www.netlify.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=Tailwind%20CSS&logoColor=white&color=06B6D4)](https://tailwindcss.com/)
+[![Shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn/ui&logoColor=white&color=000000)](https://ui.shadcn.com/)
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white&color=F24E1E)](https://www.figma.com/)
 
 > Untuk informasi lebih lanjut tentang teknologi yang digunakan, silakan merujuk ke
 > [package.json](https://github.com/Jakarta-Waspada-Banjir/jawaban-landing-page/blob/main/package.json).
