@@ -98,6 +98,5 @@ Proyek ini tidak akan terwujud tanpa kerja keras dan dedikasi dari tim kami. Ber
 | 1.  | Angga Saputra          | Front-End | [https://github.com/anggasptr](https://github.com/anggasptr)             |
 | 2.  | Samil Al-Ghiffary Azis | Front-End | [https://github.com/samilalghiffary](https://github.com/samilalghiffary) |
 | 3.  | Fariz Rifky Berliano   | Front-End | [https://github.com/ifarbie](https://github.com/ifarbie)                 |
-|     |                        |           |                                                                          |
 
 <p align="right"><a href="#readme-to-top"> Kembali ke atas  &#187;</a></p>
